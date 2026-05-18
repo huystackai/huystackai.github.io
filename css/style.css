@@ -552,15 +552,17 @@ header::before {
     gap: 0.5rem;
     align-items: center;
     margin-left: 1.5rem;
+    flex-shrink: 0;
 }
 .lang-btn {
     background: var(--bg-secondary);
     color: var(--primary-color);
     border: none;
     border-radius: var(--radius-full);
-    padding: 0.3rem 1.1rem;
-    font-size: 1rem;
+    padding: 0.35rem 0.9rem;
+    font-size: 0.95rem;
     font-weight: 600;
+    white-space: nowrap;
     cursor: pointer;
     transition: background 0.2s, color 0.2s;
 }
@@ -1387,6 +1389,21 @@ header::before {
     font-weight: 600;
 }
 
+.form-note {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.hp-field {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+}
+
 .submit-btn {
     display: inline-flex;
     align-items: center;
@@ -1852,6 +1869,51 @@ header::before {
     border-color: rgba(99, 102, 241, 0.3);
 }
 
+.nonprofit-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    height: 100%;
+}
+
+.nonprofit-logo-wrap {
+    width: 96px;
+    height: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    border-radius: var(--radius-lg);
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: var(--shadow-sm);
+}
+
+.nonprofit-logo {
+    max-width: 72px;
+    max-height: 72px;
+    object-fit: contain;
+    display: block;
+}
+
+.gsa-card {
+    padding: 1.25rem;
+}
+
+.nonprofit-banner {
+    margin-bottom: 1.25rem;
+}
+
+.nonprofit-banner img {
+    width: 100%;
+    display: block;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
 .nonprofit-icon {
     width: 64px;
     height: 64px;
@@ -1875,6 +1937,10 @@ header::before {
     font-weight: 700;
     margin-bottom: 0.5rem;
     color: var(--text-primary);
+}
+
+.nonprofit-content {
+    width: 100%;
 }
 
 .nonprofit-org {
