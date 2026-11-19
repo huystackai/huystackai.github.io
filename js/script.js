@@ -9,7 +9,7 @@ const FORMSUBMIT_ENDPOINT = 'https://formsubmit.co/ajax/giahuy.workhard@gmail.co
 
 const TYPING_TEXTS = {
     vi: [
-        'Nhà phát triển AI',
+        'AI Engineer · LLM Agents & RAG',
         'Kỹ sư Machine Learning',
         'Chuyên gia Computer Vision',
         'Huấn luyện viên Yoga',
@@ -17,7 +17,7 @@ const TYPING_TEXTS = {
         'Người làm nghiên cứu'
     ],
     en: [
-        'AI Developer',
+        'AI Engineer · LLM Agents & RAG',
         'Machine Learning Engineer',
         'Computer Vision Engineer',
         'Yoga Instructor',
@@ -25,7 +25,7 @@ const TYPING_TEXTS = {
         'Researcher'
     ],
     zh: [
-        'AI 开发者',
+        'AI 工程师 · LLM 智能体与 RAG',
         '机器学习工程师',
         '计算机视觉工程师',
         '瑜伽教练',

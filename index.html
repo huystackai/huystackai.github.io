@@ -1,1116 +1,922 @@
 <!DOCTYPE html>
+
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <title data-vi="Nguyễn Gia Huy - Nhà phát triển AI & Nghiên cứu viên" data-en="Nguyen Gia Huy - AI Developer & Researcher" data-zh="阮嘉辉 - AI 开发者与研究者">Nguyễn Gia Huy - Nhà phát triển AI & Nghiên cứu viên</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" type="module"></script>
+<script nomodule="" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
+<title data-en="Nguyen Gia Huy — AI Engineer &amp; Researcher" data-vi="Nguyễn Gia Huy — AI Engineer &amp; Researcher" data-zh="阮嘉辉 — AI 工程师与研究者">Nguyễn Gia Huy — AI Engineer &amp; Researcher</title>
+<link href="css/style.css" rel="stylesheet"/>
+<meta content="Nguyễn Gia Huy — AI Engineer, LLM Agents &amp; RAG. Best Paper Award STAIS 2026. Dự án, nghiên cứu và chứng nhận." name="description"/><link href="https://huystackai.github.io/" rel="canonical"/><link href="css/update.css" rel="stylesheet"/></head>
 <body>
-    <header class="hero-section">
-        <!-- Animated background particles -->
-        <div class="particles-bg">
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-        </div>
-        
-        <!-- Navigation Bar -->
-        <nav class="main-nav animate__animated animate__fadeInDown animate__faster">
-            <div class="nav-container">
-                <ul class="nav-menu">
-                    <li class="animate__animated animate__fadeInDown animate__delay-1s"><a href="#about" class="nav-link" data-vi="Giới thiệu" data-en="About" data-zh="关于">Giới thiệu</a></li>
-                    <li class="animate__animated animate__fadeInDown animate__delay-2s"><a href="#experience" class="nav-link" data-vi="Kinh nghiệm" data-en="Experience" data-zh="经历">Kinh nghiệm</a></li>
-                    <li class="animate__animated animate__fadeInDown animate__delay-3s"><a href="#achievements" class="nav-link" data-vi="Thành tích" data-en="Achievements" data-zh="成果">Thành tích</a></li>
-                    <li class="animate__animated animate__fadeInDown animate__delay-4s"><a href="#skills" class="nav-link" data-vi="Kỹ năng" data-en="Skills" data-zh="技能">Kỹ năng</a></li>
-                    <li class="animate__animated animate__fadeInDown animate__delay-4s"><a href="#hobbies" class="nav-link" data-vi="Sở thích" data-en="Hobbies" data-zh="兴趣">Sở thích</a></li>
-                    <li class="animate__animated animate__fadeInDown animate__delay-5s"><a href="#languages" class="nav-link" data-vi="Ngôn ngữ" data-en="Languages" data-zh="语言">Ngôn ngữ</a></li>
-                    <li class="animate__animated animate__fadeInDown animate__delay-6s"><a href="#projects" class="nav-link" data-vi="Dự án" data-en="Projects" data-zh="项目">Dự án</a></li>
-                    <li class="animate__animated animate__fadeInDown animate__delay-6s"><a href="#contact" class="nav-link contact-btn" data-vi="Liên hệ" data-en="Contact" data-zh="联系">Liên hệ</a></li>
-                </ul>
-                <div class="language-switcher">
-                    <button id="lang-vi" class="lang-btn active" data-lang="vi" type="button">VI</button>
-                    <button id="lang-en" class="lang-btn" data-lang="en" type="button">EN</button>
-                    <button id="lang-zh" class="lang-btn" data-lang="zh" type="button">中文</button>
-                </div>
-                <div class="nav-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </nav>
-
-        <!-- Hero Content -->
-        <div class="hero-content">
-            <div class="profile-section animate__animated animate__fadeInUp animate__delay-1s">
-                <div class="profile-image-container animate__animated animate__fadeInLeft animate__delay-2s">
-                    <div class="profile-ring"></div>
-                    <img src="img/anhdaidien.jpg" alt="Nguyễn Gia Huy" class="profile-image">
-                    <div class="status-indicator"></div>
-                </div>
-                <div class="profile-info animate__animated animate__fadeInRight animate__delay-2s">
-                    <div class="greeting animate__animated animate__fadeInRight animate__delay-3s">
-                        <span style="color: var(--text-white)" data-vi="Xin chào, tôi là" data-en="Hello, I'm" data-zh="你好，我是">Xin chào, tôi là</span>
-                    </div>
-                    <h1 class="name-title animate__animated animate__fadeInRight animate__delay-4s">
-                        <span class="first-name">Nguyễn</span>
-                        <span class="last-name">Gia Huy</span>
-                    </h1>
-                    <div class="typing-container animate__animated animate__fadeInRight animate__delay-5s">
-                        <span class="typing-text"></span>
-                        <span class="cursor">|</span>
-                    </div>
-                    <p class="subtitle animate__animated animate__fadeInRight animate__delay-6s">
-                        <strong style="color: var(--text-white)"><span data-vi="Theo đuổi AI ứng dụng và lối sống cân bằng" data-en="Building practical AI with a human-centered mindset" data-zh="专注于以人为本的实用型 AI">Theo đuổi AI ứng dụng và lối sống cân bằng</span></strong>
-                    </p>
-                    <div class="hero-buttons animate__animated animate__fadeInUp animate__delay-7s">
-                        <a href="CV.pdf" class="btn-primary" target="_blank" rel="noopener noreferrer" download>
-                            <span data-vi="Tải CV" data-en="Download CV" data-zh="下载简历">Tải CV</span>
-                            <ion-icon name="download-outline"></ion-icon>
-                        </a>
-                        <a href="#contact" class="btn-secondary">
-                            <span data-vi="Liên hệ" data-en="Get In Touch" data-zh="联系我">Liên hệ</span>
-                            <ion-icon name="arrow-forward-outline"></ion-icon>
-                        </a>
-                        <a href="#projects" class="btn-secondary">
-                            <span data-vi="Xem dự án" data-en="View My Work" data-zh="查看项目">Xem dự án</span>
-                            <ion-icon name="eye-outline"></ion-icon>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Scroll Indicator -->
-            <div class="scroll-indicator animate__animated animate__fadeInUp animate__delay-8s">
-                <div class="scroll-line"></div>
-                <span style="color: var(--text-white)" data-vi="Cuộn xuống" data-en="Scroll Down" data-zh="向下滚动">Cuộn xuống</span>
-                <ion-icon name="chevron-down-outline"></ion-icon>
-            </div>
-        </div>
-    </header>
-
-    <section id="about" class="section-container">
-        <div class="section-header">
-            <span class="section-number">01</span>
-            <h2 class="section-title animate-on-scroll" data-vi="Giới thiệu bản thân" data-en="About Me" data-zh="关于我">Giới thiệu bản thân</h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="about-content">
-            <div class="about-text animate-on-scroll">
-                <div class="about-intro" style="display:flex;align-items:center;gap:1rem;">
-                    <ion-icon name="sparkles-outline" style="font-size:2rem;color:var(--primary-color);"></ion-icon>
-                    <span class="highlight" data-vi="Giới thiệu bản thân" data-en="About Me" data-zh="关于我">Giới thiệu bản thân</span>
-                </div>
-                <blockquote class="about-quote" data-vi="Tôi là Nguyễn Gia Huy, tập trung vào giao điểm giữa công nghệ, sáng tạo và sức khỏe tinh thần. Với nền tảng về Trí tuệ nhân tạo và đổi mới số, tôi xây dựng những giải pháp có tính ứng dụng, rõ giá trị và hướng đến con người." data-en="I’m Nguyen Gia Huy, working at the intersection of technology, creativity, and well-being. With a background in Artificial Intelligence and digital innovation, I build practical solutions that are thoughtful, useful, and human-centered." data-zh="我是阮嘉辉，持续关注科技、创造力与身心健康之间的连接。依托人工智能与数字创新的背景，我希望打造真正有用、清晰且以人为本的解决方案。">
-                    Tôi là Nguyễn Gia Huy, tập trung vào giao điểm giữa công nghệ, sáng tạo và sức khỏe tinh thần. Với nền tảng về Trí tuệ nhân tạo và đổi mới số, tôi xây dựng những giải pháp có tính ứng dụng, rõ giá trị và hướng đến con người.
-                </blockquote>
-                <p data-vi="Bên cạnh công việc công nghệ, tôi là huấn luyện viên yoga được chứng nhận và cũng sáng tạo nội dung trên nền tảng số. Tôi quan tâm đến việc lan tỏa một lối sống cân bằng giữa hiệu suất, sự tỉnh thức và sức khỏe toàn diện." data-en="Beyond technology, I’m also a certified yoga instructor and digital content creator. I care deeply about promoting a balanced way of living, where performance, mindfulness, and holistic health can grow together." data-zh="除了技术工作之外，我也是一名持证瑜伽教练和数字内容创作者。我希望传递一种更平衡的生活方式，让效率、觉察与整体健康可以同时成长。">
+<header class="hero-section">
+<!-- Animated background particles -->
+<div class="particles-bg">
+<div class="particle"></div>
+<div class="particle"></div>
+<div class="particle"></div>
+<div class="particle"></div>
+<div class="particle"></div>
+<div class="particle"></div>
+</div>
+<!-- Navigation Bar -->
+<nav class="main-nav animate__animated animate__fadeInDown animate__faster">
+<div class="nav-container">
+<ul class="nav-menu">
+<li class="animate__animated animate__fadeInDown animate__delay-1s"><a class="nav-link" data-en="About" data-vi="Giới thiệu" data-zh="关于" href="#about">Giới thiệu</a></li>
+<li class="animate__animated animate__fadeInDown animate__delay-2s"><a class="nav-link" data-en="Experience" data-vi="Kinh nghiệm" data-zh="经历" href="#experience">Kinh nghiệm</a></li>
+<li class="animate__animated animate__fadeInDown animate__delay-3s"><a class="nav-link" data-en="Achievements" data-vi="Thành tích" data-zh="成果" href="#achievements">Thành tích</a></li>
+<li class="animate__animated animate__fadeInDown animate__delay-4s"><a class="nav-link" data-en="Skills" data-vi="Kỹ năng" data-zh="技能" href="#skills">Kỹ năng</a></li>
+<li class="animate__animated animate__fadeInDown animate__delay-4s"><a class="nav-link" data-en="Hobbies" data-vi="Sở thích" data-zh="兴趣" href="#hobbies">Sở thích</a></li>
+<li class="animate__animated animate__fadeInDown animate__delay-5s"><a class="nav-link" data-en="Languages" data-vi="Ngôn ngữ" data-zh="语言" href="#languages">Ngôn ngữ</a></li>
+<li class="animate__animated animate__fadeInDown animate__delay-6s"><a class="nav-link" data-en="Projects" data-vi="Dự án" data-zh="项目" href="#projects">Dự án</a></li>
+<li class="animate__animated animate__fadeInDown animate__delay-6s"><a class="nav-link contact-btn" data-en="Contact" data-vi="Liên hệ" data-zh="联系" href="#contact">Liên hệ</a></li>
+</ul>
+<div class="language-switcher">
+<button class="lang-btn active" data-lang="vi" id="lang-vi" type="button">VI</button>
+<button class="lang-btn" data-lang="en" id="lang-en" type="button">EN</button>
+<button class="lang-btn" data-lang="zh" id="lang-zh" type="button">中文</button>
+</div>
+<div class="nav-toggle">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+</nav>
+<!-- Hero Content -->
+<div class="hero-content">
+<div class="profile-section animate__animated animate__fadeInUp animate__delay-1s">
+<div class="profile-image-container animate__animated animate__fadeInLeft animate__delay-2s">
+<div class="profile-ring"></div>
+<img alt="Nguyễn Gia Huy" class="profile-image" src="img/anhdaidien.jpg"/>
+<div class="status-indicator"></div>
+</div>
+<div class="profile-info animate__animated animate__fadeInRight animate__delay-2s">
+<div class="greeting animate__animated animate__fadeInRight animate__delay-3s">
+<span data-en="Hello, I'm" data-vi="Xin chào, tôi là" data-zh="你好，我是" style="color: var(--text-white)">Xin chào, tôi là</span>
+</div>
+<h1 class="name-title animate__animated animate__fadeInRight animate__delay-4s">
+<span class="first-name">Nguyễn</span>
+<span class="last-name">Gia Huy</span>
+</h1>
+<div class="typing-container animate__animated animate__fadeInRight animate__delay-5s">
+<span class="typing-text"></span>
+<span class="cursor">|</span>
+</div>
+<p class="subtitle animate__animated animate__fadeInRight animate__delay-6s">
+<strong style="color: var(--text-white)"><span data-en="Applied AI, LLM Agents &amp; RAG — from research to products" data-vi="AI ứng dụng, LLM Agents &amp; RAG — từ nghiên cứu đến sản phẩm" data-zh="应用 AI、LLM 智能体与 RAG — 从研究到产品">AI ứng dụng, LLM Agents &amp; RAG — từ nghiên cứu đến sản phẩm</span></strong>
+</p>
+<div class="hero-buttons animate__animated animate__fadeInUp animate__delay-7s">
+<a class="btn-primary" download="" href="CV.pdf" rel="noopener noreferrer" target="_blank">
+<span data-en="Download CV" data-vi="Tải CV" data-zh="下载简历">Tải CV</span>
+<ion-icon name="download-outline"></ion-icon>
+</a>
+<a class="btn-secondary" href="#contact">
+<span data-en="Get In Touch" data-vi="Liên hệ" data-zh="联系我">Liên hệ</span>
+<ion-icon name="arrow-forward-outline"></ion-icon>
+</a>
+<a class="btn-secondary" href="#projects">
+<span data-en="View My Work" data-vi="Xem dự án" data-zh="查看项目">Xem dự án</span>
+<ion-icon name="eye-outline"></ion-icon>
+</a>
+<a class="btn-secondary" data-en="Awards &amp; papers" data-vi="Thành tích &amp; paper" data-zh="成果与论文" href="achievements.html">Thành tích &amp; paper</a></div>
+<p class="hero-award" data-en="Best Paper Award · STAIS 2026 · EG-cDAGAN first author" data-vi="Best Paper Award · STAIS 2026 · Tác giả đầu EG-cDAGAN" data-zh="Best Paper Award · STAIS 2026 · EG-cDAGAN 第一作者">Best Paper Award · STAIS 2026 · Tác giả đầu EG-cDAGAN</p></div>
+</div>
+<!-- Scroll Indicator -->
+<div class="scroll-indicator animate__animated animate__fadeInUp animate__delay-8s">
+<div class="scroll-line"></div>
+<span data-en="Scroll Down" data-vi="Cuộn xuống" data-zh="向下滚动" style="color: var(--text-white)">Cuộn xuống</span>
+<ion-icon name="chevron-down-outline"></ion-icon>
+</div>
+</div>
+</header>
+<section class="section-container" id="about">
+<div class="section-header">
+<span class="section-number">01</span>
+<h2 class="section-title animate-on-scroll" data-en="About Me" data-vi="Giới thiệu bản thân" data-zh="关于我">Giới thiệu bản thân</h2>
+<div class="section-line"></div>
+</div>
+<div class="about-content">
+<div class="about-text animate-on-scroll">
+<div class="about-intro" style="display:flex;align-items:center;gap:1rem;">
+<ion-icon name="sparkles-outline" style="font-size:2rem;color:var(--primary-color);"></ion-icon>
+<span class="highlight" data-en="About Me" data-vi="Giới thiệu bản thân" data-zh="关于我">Giới thiệu bản thân</span>
+</div>
+<blockquote class="about-quote" data-en="I’m Nguyen Gia Huy, an AI engineer focused on conversational AI, LLM agents and RAG. I build Python/FastAPI backends, retrieval systems and multi-agent workflows, alongside research on image generation and evidence-grounded answers." data-vi="Tôi là Nguyễn Gia Huy, kỹ sư AI tập trung vào Conversational AI, LLM Agents và RAG. Tôi xây dựng backend Python/FastAPI, hệ thống truy xuất và các luồng đa tác tử; đồng thời nghiên cứu mô hình sinh ảnh và chất lượng câu trả lời dựa trên bằng chứng." data-zh="我是阮嘉辉，一名专注于对话式 AI、LLM 智能体和 RAG 的 AI 工程师。我开发 Python/FastAPI 后端、检索系统与多智能体工作流，同时研究图像生成和基于证据的回答。">Tôi là Nguyễn Gia Huy, kỹ sư AI tập trung vào Conversational AI, LLM Agents và RAG. Tôi xây dựng backend Python/FastAPI, hệ thống truy xuất và các luồng đa tác tử; đồng thời nghiên cứu mô hình sinh ảnh và chất lượng câu trả lời dựa trên bằng chứng.</blockquote><p data-en="Information Technology, Artificial Intelligence specialization · UTH · 2023–2026 · GPA 3.4/4.0. Program completed. First author of EG-cDAGAN, awarded Best Paper at STAIS 2026." data-vi="Công nghệ thông tin, chuyên ngành Trí tuệ nhân tạo · UTH · 2023–2026 · GPA 3,4/4,0. Đã hoàn thành chương trình học. Tác giả đầu bài EG-cDAGAN đạt Best Paper Award tại STAIS 2026." data-zh="UTH 信息技术专业，人工智能方向 · 2023–2026 · GPA 3.4/4.0。已完成课程。EG-cDAGAN 第一作者，获 STAIS 2026 最佳论文奖。">Công nghệ thông tin, chuyên ngành Trí tuệ nhân tạo · UTH · 2023–2026 · GPA 3,4/4,0. Đã hoàn thành chương trình học. Tác giả đầu bài EG-cDAGAN đạt Best Paper Award tại STAIS 2026.</p>
+<p data-en="Beyond technology, I’m also a certified yoga instructor and digital content creator. I care deeply about promoting a balanced way of living, where performance, mindfulness, and holistic health can grow together." data-vi="Bên cạnh công việc công nghệ, tôi là huấn luyện viên yoga được chứng nhận và cũng sáng tạo nội dung trên nền tảng số. Tôi quan tâm đến việc lan tỏa một lối sống cân bằng giữa hiệu suất, sự tỉnh thức và sức khỏe toàn diện." data-zh="除了技术工作之外，我也是一名持证瑜伽教练和数字内容创作者。我希望传递一种更平衡的生活方式，让效率、觉察与整体健康可以同时成长。">
                     Bên cạnh công việc công nghệ, tôi là huấn luyện viên yoga được chứng nhận và cũng sáng tạo nội dung trên nền tảng số. Tôi quan tâm đến việc lan tỏa một lối sống cân bằng giữa hiệu suất, sự tỉnh thức và sức khỏe toàn diện.
                 </p>
-                <p data-vi="Tôi tin rằng phát triển bền vững không chỉ đến từ tiến bộ công nghệ, mà còn từ sự cân bằng giữa tư duy, thể chất và tinh thần." data-en="I believe sustainable progress comes not only from better technology, but also from balance between the mind, the body, and the way we live." data-zh="我相信，可持续的成长不仅来自技术进步，也来自思维、身体与生活方式之间的平衡。">
+<p data-en="I believe sustainable progress comes not only from better technology, but also from balance between the mind, the body, and the way we live." data-vi="Tôi tin rằng phát triển bền vững không chỉ đến từ tiến bộ công nghệ, mà còn từ sự cân bằng giữa tư duy, thể chất và tinh thần." data-zh="我相信，可持续的成长不仅来自技术进步，也来自思维、身体与生活方式之间的平衡。">
                     Tôi tin rằng phát triển bền vững không chỉ đến từ tiến bộ công nghệ, mà còn từ sự cân bằng giữa tư duy, thể chất và tinh thần.
                 </p>
-                <div class="career-goals">
-                    <h3>
-                        <ion-icon name="flag-outline" style="vertical-align:middle;color:var(--accent-color);"></ion-icon>
-                        <span data-vi="Mục tiêu nghề nghiệp" data-en="Career Goals" data-zh="职业目标">Mục tiêu nghề nghiệp</span>
-                    </h3>
-                    <ul style="margin-left:1.5rem;">
-                        <li data-vi="Phát triển các giải pháp AI và công nghệ số có thể ứng dụng thực tế trong giáo dục, y tế và đời sống bền vững." data-en="To build AI and digital solutions that can be applied meaningfully in education, healthcare, and sustainable living." data-zh="开发能够真正应用于教育、医疗与可持续生活场景的 AI 与数字化解决方案。">
+<div class="career-goals">
+<h3>
+<ion-icon name="flag-outline" style="vertical-align:middle;color:var(--accent-color);"></ion-icon>
+<span data-en="Career Goals" data-vi="Mục tiêu nghề nghiệp" data-zh="职业目标">Mục tiêu nghề nghiệp</span>
+</h3>
+<ul style="margin-left:1.5rem;">
+<li data-en="To build AI and digital solutions that can be applied meaningfully in education, healthcare, and sustainable living." data-vi="Phát triển các giải pháp AI và công nghệ số có thể ứng dụng thực tế trong giáo dục, y tế và đời sống bền vững." data-zh="开发能够真正应用于教育、医疗与可持续生活场景的 AI 与数字化解决方案。">
                             Phát triển các giải pháp AI và công nghệ số có thể ứng dụng thực tế trong giáo dục, y tế và đời sống bền vững.
                         </li>
-                        <li data-vi="Xây dựng thương hiệu cá nhân và nền tảng nội dung truyền cảm hứng về tự học, sức khỏe tinh thần và thói quen số lành mạnh." data-en="To grow a personal brand and content platform that encourages self-learning, mental well-being, and healthy digital habits." data-zh="建立个人品牌与内容平台，持续分享自学、心理健康与健康数字习惯相关的内容。">
+<li data-en="To grow a personal brand and content platform that encourages self-learning, mental well-being, and healthy digital habits." data-vi="Xây dựng thương hiệu cá nhân và nền tảng nội dung truyền cảm hứng về tự học, sức khỏe tinh thần và thói quen số lành mạnh." data-zh="建立个人品牌与内容平台，持续分享自学、心理健康与健康数字习惯相关的内容。">
                             Xây dựng thương hiệu cá nhân và nền tảng nội dung truyền cảm hứng về tự học, sức khỏe tinh thần và thói quen số lành mạnh.
                         </li>
-                        <li data-vi="Kết nối công nghệ với chánh niệm thông qua những sản phẩm số nhân văn, giúp con người phát triển toàn diện trong thời đại số." data-en="To connect technology with mindfulness through human-centered digital products that support more balanced growth in the digital age." data-zh="通过更具人文关怀的数字产品，把科技与正念连接起来，帮助人们在数字时代实现更平衡的成长。">
+<li data-en="To connect technology with mindfulness through human-centered digital products that support more balanced growth in the digital age." data-vi="Kết nối công nghệ với chánh niệm thông qua những sản phẩm số nhân văn, giúp con người phát triển toàn diện trong thời đại số." data-zh="通过更具人文关怀的数字产品，把科技与正念连接起来，帮助人们在数字时代实现更平衡的成长。">
                             Kết nối công nghệ với chánh niệm thông qua những sản phẩm số nhân văn, giúp con người phát triển toàn diện trong thời đại số.
                         </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="about-visual animate-on-scroll">
-                <div class="visual-element">
-                    <div class="code-window">
-                        <div class="window-header">
-                            <div class="window-controls">
-                                <span class="control close"></span>
-                                <span class="control minimize"></span>
-                                <span class="control maximize"></span>
-                            </div>
-                            <span class="window-title">ai_developer.py</span>
-                        </div>
-                        <div class="code-content">
-                            <div class="code-line"><span class="keyword">class</span> <span class="class-name">AIResearcher</span>:</div>
-                            <div class="code-line">    <span class="keyword">def</span> <span class="function">__init__</span>(self):</div>
-                            <div class="code-line">        self.name = <span class="string">"Gia Huy"</span></div>
-                            <div class="code-line">        self.skills = [<span class="string">"AI"</span>, <span class="string">"ML"</span>, <span class="string">"CV"</span>]</div>
-                            <div class="code-line">        self.passion = <span class="string">"Innovation"</span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>    <!-- Work Experience Section -->
-    <section id="experience" class="section-container dark-section">
-        <div class="section-header">
-            <span class="section-number">02</span>
-            <h2 class="section-title animate-on-scroll" data-vi="Kinh nghiệm làm việc" data-en="Work Experience" data-zh="工作经历">Kinh nghiệm làm việc</h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="experience-timeline">
-            <div class="timeline-line"></div>
-            <div class="timeline-item animate-on-scroll" data-date="2024">
-                <div class="timeline-dot"><div class="dot-inner"></div></div>
-                <div class="timeline-content">
-                    <div class="timeline-badge" data-vi="Hiện tại" data-en="Current" data-zh="当前">Hiện tại</div>
-                    <div class="timeline-date" data-vi="03/2024 - Nay" data-en="03/2024 - Present" data-zh="03/2024 - 至今">03/2024 - Nay</div>
-                    <h3 data-vi="Lập trình viên Web & Quản lý dự án" data-en="Web Developer & Project Manager" data-zh="网页开发者与项目管理">Lập trình viên Web & Quản lý dự án</h3>
-                    <h4 data-vi="Duong Lifestyle" data-en="Duong Lifestyle" data-zh="Duong Lifestyle">Duong Lifestyle</h4>
-                    <p data-vi="Thiết kế, phát triển website, quản lý dự án và truyền thông. Chịu trách nhiệm về giao diện, trải nghiệm người dùng và triển khai các chiến dịch marketing số." data-en="Design and develop websites, manage projects and communications. Responsible for UI/UX, project coordination, and digital marketing campaigns." data-zh="负责网站设计与开发、项目协调及传播工作，重点聚焦界面体验、用户体验与数字营销活动执行。">Thiết kế, phát triển website, quản lý dự án và truyền thông. Chịu trách nhiệm về giao diện, trải nghiệm người dùng và triển khai các chiến dịch marketing số.</p>
-                    <div class="timeline-skills">
-                        <span data-vi="Thiết kế Web" data-en="Web Design" data-zh="网页设计">Thiết kế Web</span>
-                        <span data-vi="Quản lý dự án" data-en="Project Management" data-zh="项目管理">Quản lý dự án</span>
-                        <span data-vi="Marketing số" data-en="Digital Marketing" data-zh="数字营销">Marketing số</span>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline-item animate-on-scroll" data-date="2023">
-                <div class="timeline-dot"><div class="dot-inner"></div></div>
-                <div class="timeline-content">
-                    <div class="timeline-date" data-vi="11/2023 - Nay" data-en="11/2023 - Present" data-zh="11/2023 - 至今">11/2023 - Nay</div>
-                    <h3 data-vi="Lập trình viên Web & Chuyên viên Marketing" data-en="Web Developer & Marketing Specialist" data-zh="网页开发者与市场传播专员">Lập trình viên Web & Chuyên viên Marketing</h3>
-                    <h4 data-vi="Yên Văn" data-en="Yen Van" data-zh="Yên Văn">Yên Văn</h4>
-                    <p data-vi="Phát triển giao diện web, xây dựng nội dung truyền thông, hỗ trợ quản lý dự án giáo dục. Đảm bảo chất lượng sản phẩm số và hiệu quả truyền thông." data-en="Developed web interfaces, created communication content, and supported educational project management. Ensured digital product quality and effective outreach." data-zh="负责网页界面开发、传播内容制作与教育项目支持，兼顾数字产品质量与传播效果。">Phát triển giao diện web, xây dựng nội dung truyền thông, hỗ trợ quản lý dự án giáo dục. Đảm bảo chất lượng sản phẩm số và hiệu quả truyền thông.</p>
-                    <div class="timeline-skills">
-                        <span data-vi="Phát triển Web" data-en="Web Development" data-zh="网页开发">Phát triển Web</span>
-                        <span data-vi="Truyền thông" data-en="Communication" data-zh="传播沟通">Truyền thông</span>
-                        <span data-vi="Công nghệ giáo dục" data-en="EdTech" data-zh="教育科技">Công nghệ giáo dục</span>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline-item animate-on-scroll" data-date="2023">
-                <div class="timeline-dot"><div class="dot-inner"></div></div>
-                <div class="timeline-content">
-                    <div class="timeline-date" data-vi="06/2023 - 12/2023" data-en="06/2023 - 12/2023" data-zh="06/2023 - 12/2023">06/2023 - 12/2023</div>
-                    <h3 data-vi="Trợ lý giám đốc & Lễ tân" data-en="Assistant Manager & Receptionist" data-zh="经理助理与前台接待">Trợ lý giám đốc & Lễ tân</h3>
-                    <h4 data-vi="Versailess Spa" data-en="Versailess Spa" data-zh="Versailess Spa">Versailess Spa</h4>
-                    <p data-vi="Hỗ trợ giám đốc điều hành, tư vấn khách hàng, biên soạn tài liệu và hợp đồng, quản lý hoạt động vận hành spa." data-en="Assisted executive management, provided customer consultation, prepared documents and contracts, and managed spa operations." data-zh="协助管理层运营、客户咨询、文件与合同准备，以及 SPA 日常运营管理。">Hỗ trợ giám đốc điều hành, tư vấn khách hàng, biên soạn tài liệu và hợp đồng, quản lý hoạt động vận hành spa.</p>
-                    <div class="timeline-skills">
-                        <span data-vi="Chăm sóc khách hàng" data-en="Customer Service" data-zh="客户服务">Chăm sóc khách hàng</span>
-                        <span data-vi="Quản lý" data-en="Management" data-zh="运营管理">Quản lý</span>
-                        <span data-vi="Tài liệu" data-en="Documentation" data-zh="文档处理">Tài liệu</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>    <section id="achievements" class="section-container">
-        <div class="section-header">
-            <span class="section-number">03</span>
-            <h2 class="section-title animate-on-scroll" data-vi="Thành tích & Ghi nhận" data-en="Achievements & Recognition" data-zh="成果与荣誉">Thành tích & Ghi nhận</h2>
-            <div class="section-line"></div>
-        </div>
-        
-        <div class="achievements-container">
-            <!-- Achievements Timeline Section -->
-            <div class="achievements-timeline animate-on-scroll">
-                <div class="timeline-line"></div>
-                <div class="achievement-item animate-on-scroll">
-                    <div class="timeline-dot">
-                        <div class="dot-inner"></div>
-                    </div>
-                    <div class="achievement-content">
-                        <div class="achievement-badge">2025</div>
-                        <div class="achievement-date">2025</div>
-                        <h3 data-vi="Báo cáo Khoa học Quốc gia" data-en="National Scientific Report" data-zh="国家级科研报告">Báo cáo Khoa học Quốc gia</h3>
-                        <h4 data-vi="CTST 2025" data-en="CTST 2025" data-zh="CTST 2025">CTST 2025</h4>
-                        <p data-vi="Báo cáo và xuất bản tại Hội thảo Khoa học Quốc gia lần VI về Khoa học và Công nghệ Giao thông Vận tải (ISBN: 978-604-76-3107-0)." data-en="Presented and published at the 6th National Conference on Science and Technology in Transport (ISBN: 978-604-76-3107-0)." data-zh="成果发表于第六届国家交通运输科学与技术会议论文集中（ISBN: 978-604-76-3107-0）。">Báo cáo và xuất bản tại Hội thảo Khoa học Quốc gia lần VI về Khoa học và Công nghệ Giao thông Vận tải (ISBN: 978-604-76-3107-0).</p>
-                    </div>
-                </div>
-                <div class="achievement-item animate-on-scroll">
-                    <div class="timeline-dot">
-                        <div class="dot-inner"></div>
-                    </div>
-                    <div class="achievement-content">
-                        <div class="achievement-badge">Excellence</div>
-                        <div class="achievement-date">2025</div>
-                        <h3 data-vi="Xuất sắc Chiến dịch Xuân Tình nguyện" data-en="Outstanding Spring Volunteer Campaign" data-zh="春季志愿服务优秀表彰">Xuất sắc Chiến dịch Xuân Tình nguyện</h3>
-                        <h4 data-vi="Đoàn trường" data-en="Youth Union" data-zh="校青年团">Đoàn trường</h4>
-                        <p data-vi="Giấy khen hoàn thành xuất sắc nhiệm vụ trong Chiến dịch Xuân tình nguyện 2025." data-en="Certificate of excellence for outstanding performance in the 2025 Spring Volunteer Campaign." data-zh="因在 2025 年春季志愿服务活动中表现突出而获得表彰。">Giấy khen hoàn thành xuất sắc nhiệm vụ trong Chiến dịch Xuân tình nguyện 2025.</p>
-                    </div>
-                </div>
-                <div class="achievement-item animate-on-scroll">
-                    <div class="timeline-dot">
-                        <div class="dot-inner"></div>
-                    </div>
-                    <div class="achievement-content">
-                        <div class="achievement-badge">Google</div>
-                        <div class="achievement-date">2025</div>
-                        <h3 data-vi="Google Student Ambassador" data-en="Google Student Ambassador" data-zh="Google 学生大使">Google Student Ambassador</h3>
-                        <h4 data-vi="Cộng đồng sinh viên công nghệ" data-en="Student Technology Community" data-zh="学生科技社区">Cộng đồng sinh viên công nghệ</h4>
-                        <p data-vi="Đồng hành cùng cộng đồng sinh viên trong các hoạt động chia sẻ kỹ năng số, học công nghệ và kết nối những sáng kiến tạo ra tác động tích cực." data-en="Worked with student communities through digital-skills sharing, technology learning activities, and initiatives designed to create positive impact." data-zh="参与学生科技社群建设，推动数字技能分享、技术学习活动，以及具有积极影响力的校园项目。">Đồng hành cùng cộng đồng sinh viên trong các hoạt động chia sẻ kỹ năng số, học công nghệ và kết nối những sáng kiến tạo ra tác động tích cực.</p>
-                    </div>
-                </div>
-                <div class="achievement-item animate-on-scroll">
-                    <div class="timeline-dot">
-                        <div class="dot-inner"></div>
-                    </div>
-                    <div class="achievement-content">
-                        <div class="achievement-badge">Bronze Medal</div>
-                        <div class="achievement-date">2024</div>
-                        <h3 data-vi="Huy chương Đồng - Thiết kế Chế tạo Ứng dụng" data-en="Bronze Medal - Design and Application" data-zh="应用设计与制作铜奖">Huy chương Đồng - Thiết kế Chế tạo Ứng dụng</h3>
-                        <h4 data-vi="Ban Chấp hành Thành Đoàn TP.HCM" data-en="HCMC Youth Union Executive Committee" data-zh="胡志明市青年团执委会">Ban Chấp hành Thành Đoàn TP.HCM</h4>
-                        <p data-vi="Cuộc thi lần thứ 12 năm 2024 với đề tài 'Nutrition - Giải pháp mới cho cuộc sống' tại Đại học Sư phạm Kỹ thuật TP.HCM." data-en="Bronze medal at the 12th competition in 2024 for the project 'Nutrition - New Solutions for a New Life' at HCM University of Technology and Education." data-zh="在 2024 年第 12 届比赛中，凭借 'Nutrition - Giải pháp mới cho cuộc sống' 项目获得铜奖。">Cuộc thi lần thứ 12 năm 2024 với đề tài 'Nutrition - Giải pháp mới cho cuộc sống' tại Đại học Sư phạm Kỹ thuật TP.HCM.</p>
-                    </div>
-                </div>
-                <div class="achievement-item animate-on-scroll">
-                    <div class="timeline-dot">
-                        <div class="dot-inner"></div>
-                    </div>
-                    <div class="achievement-content">
-                        <div class="achievement-badge">International</div>
-                        <div class="achievement-date">2024</div>
-                        <h3 data-vi="Diễn đàn Khoa học Sinh viên Quốc tế" data-en="International Student Science Forum" data-zh="国际学生科学论坛">Diễn đàn Khoa học Sinh viên Quốc tế</h3>
-                        <h4 data-vi="Hội sinh viên TP.HCM - Lần 8" data-en="HCMC Student Association - 8th Edition" data-zh="胡志明市学生会第 8 届">Hội sinh viên TP.HCM - Lần 8</h4>
-                        <p data-vi="Tham gia diễn đàn với chủ đề thanh niên phát huy vai trò xung kích, tình nguyện vì cộng đồng từ địa phương đến toàn cầu." data-en="Joined the forum on how youth can lead volunteerism and community impact from the local level to the global stage." data-zh="参与国际学生科学论坛，主题聚焦青年如何从地方到全球层面推动志愿行动与社区影响力。">Tham gia diễn đàn với chủ đề thanh niên phát huy vai trò xung kích, tình nguyện vì cộng đồng từ địa phương đến toàn cầu.</p>
-                    </div>
-                </div>
-                <div class="achievement-item animate-on-scroll">
-                    <div class="timeline-dot">
-                        <div class="dot-inner"></div>
-                    </div>
-                    <div class="achievement-content">
-                        <div class="achievement-badge">Observer</div>
-                        <div class="achievement-date">2024</div>
-                        <h3 data-vi="Quan sát viên LCOY Việt Nam" data-en="LCOY Vietnam Observer" data-zh="越南 LCOY 观察员">Quan sát viên LCOY Việt Nam</h3>
-                        <h4 data-vi="YNet Việt Nam - Bộ TN&MT - UNDP" data-en="YNet Vietnam - Ministry of Natural Resources & Environment - UNDP" data-zh="YNet Vietnam - 自然资源与环境部 - UNDP">YNet Việt Nam - Bộ TN&MT - UNDP</h4>
-                        <p data-vi="Đại biểu quan sát viên tại Local Conference of Youth - LCOY Viet Nam 2024." data-en="Observer delegate at the 2024 Local Conference of Youth (LCOY Vietnam)." data-zh="作为观察员代表参加 2024 年越南青年地方气候大会（LCOY Vietnam）。">Đại biểu quan sát viên tại Local Conference of Youth - LCOY Viet Nam 2024.</p>
-                    </div>
-                </div>
-                <div class="achievement-item animate-on-scroll">
-                    <div class="timeline-dot">
-                        <div class="dot-inner"></div>
-                    </div>
-                    <div class="achievement-content">
-                        <div class="achievement-badge">3 Publications</div>
-                        <div class="achievement-date">2024</div>
-                        <h3 data-vi="3 Bài Hội thảo - Phát triển AI" data-en="3 AI Development Conference Papers" data-zh="3 篇 AI 发展会议论文">3 Bài Hội thảo - Phát triển AI</h3>
-                        <h4 data-vi="Sở TT&TT TP.HCM" data-en="HCMC Department of Information & Communications" data-zh="胡志明市信息与通信厅">Sở TT&TT TP.HCM</h4>
-                        <p data-vi="3 bài hội thảo được in trong kỷ yếu 'Phát triển Nguồn Nhân lực Trí tuệ Nhân tạo (AI) năm 2024'." data-en="Published 3 conference papers in the proceedings 'AI Human Resource Development 2024'." data-zh="3 篇会议论文收录于《2024 年人工智能人力资源发展》论文集。">3 bài hội thảo được in trong kỷ yếu 'Phát triển Nguồn Nhân lực Trí tuệ Nhân tạo (AI) năm 2024'.</p>
-                    </div>
-                </div>
-                <div class="achievement-item animate-on-scroll">
-                    <div class="timeline-dot">
-                        <div class="dot-inner"></div>
-                    </div>
-                    <div class="achievement-content">
-                        <div class="achievement-badge">Volunteer</div>
-                        <div class="achievement-date">2024</div>
-                        <h3 data-vi="Trí thức Khoa học Trẻ Tình nguyện" data-en="Young Science Volunteer" data-zh="青年科技志愿者">Trí thức Khoa học Trẻ Tình nguyện</h3>
-                        <h4 data-vi="UBND huyện Tháp Mười, Đồng Tháp" data-en="People's Committee of Thap Muoi District, Dong Thap" data-zh="同塔省塔梅县人民委员会">UBND huyện Tháp Mười, Đồng Tháp</h4>
-                        <p data-vi="Được ghi nhận thành tích xuất sắc trong chương trình 'Trí thức khoa học trẻ tình nguyện năm 2024'." data-en="Recognized for outstanding contribution to the 2024 Young Science Volunteer Program." data-zh="因在 2024 年青年科技志愿者项目中的突出贡献而获表彰。">Được ghi nhận thành tích xuất sắc trong chương trình 'Trí thức khoa học trẻ tình nguyện năm 2024'.</p>
-                    </div>
-                </div>
-                <div class="achievement-item animate-on-scroll">
-                    <div class="timeline-dot">
-                        <div class="dot-inner"></div>
-                    </div>
-                    <div class="achievement-content">
-                        <div class="achievement-badge">2nd Prize</div>
-                        <div class="achievement-date">2024</div>
-                        <h3 data-vi="Giải nhì - An toàn Thực phẩm" data-en="2nd Prize - Food Safety" data-zh="食品安全二等奖">Giải nhì - An toàn Thực phẩm</h3>
-                        <h4 data-vi="HUIT - Hội thảo lần 8" data-en="HUIT - 8th Conference" data-zh="HUIT 第 8 届研讨会">HUIT - Hội thảo lần 8</h4>
-                        <p data-vi="Đề tài ứng dụng AI trong quản lý dinh dưỡng nhằm bảo đảm an toàn thực phẩm cho đô thị thông minh Việt Nam." data-en="Second-prize work on applying AI to nutrition management for food safety in Vietnam's smart cities." data-zh="以 AI 应用于营养管理、服务越南智慧城市食品安全为主题的研究获得二等奖。">Đề tài ứng dụng AI trong quản lý dinh dưỡng nhằm bảo đảm an toàn thực phẩm cho đô thị thông minh Việt Nam.</p>
-                    </div>
-                </div>
-                <div class="achievement-item animate-on-scroll">
-                    <div class="timeline-dot">
-                        <div class="dot-inner"></div>
-                    </div>
-                    <div class="achievement-content">
-                        <div class="achievement-badge">3rd Prize</div>
-                        <div class="achievement-date">2024</div>
-                        <h3 data-vi="Giải ba - Blockchain Truy xuất Thực phẩm" data-en="3rd Prize - Blockchain Food Traceability" data-zh="食品溯源区块链三等奖">Giải ba - Blockchain Truy xuất Thực phẩm</h3>
-                        <h4 data-vi="An toàn thực phẩm - Lần 8" data-en="Food Safety - 8th Edition" data-zh="食品安全第 8 届">An toàn thực phẩm - Lần 8</h4>
-                        <p data-vi="Đề tài ứng dụng Blockchain trong truy xuất nguồn gốc thực phẩm." data-en="Third-prize work on applying blockchain to food traceability." data-zh="以区块链应用于食品来源追溯为主题的研究获得三等奖。">Đề tài ứng dụng Blockchain trong truy xuất nguồn gốc thực phẩm.</p>
-                    </div>
-                </div>
-                <div class="achievement-item animate-on-scroll">
-                    <div class="timeline-dot">
-                        <div class="dot-inner"></div>
-                    </div>
-                    <div class="achievement-content">
-                        <div class="achievement-badge">3rd Prize</div>
-                        <div class="achievement-date">2024</div>
-                        <h3 data-vi="Giải ba - AI trong Chẩn đoán Y tế" data-en="3rd Prize - AI in Medical Diagnosis" data-zh="AI 医疗诊断三等奖">Giải ba - AI trong Chẩn đoán Y tế</h3>
-                        <h4 data-vi="Bệnh viện Thống Nhất" data-en="Thong Nhat Hospital" data-zh="统一医院">Bệnh viện Thống Nhất</h4>
-                        <p data-vi="Nền tảng Nutritions ứng dụng AI gợi ý bữa ăn theo thể trạng, được xuất bản trên Tạp chí Khoa học Trẻ (ISSN: 2354-1105)." data-en="Nutritions, an AI-powered meal recommendation platform, was published in Young Science Journal (ISSN: 2354-1105)." data-zh="AI 膳食建议平台 Nutritions 相关成果发表于《青年科学期刊》（ISSN: 2354-1105）。">Nền tảng Nutritions ứng dụng AI gợi ý bữa ăn theo thể trạng, được xuất bản trên Tạp chí Khoa học Trẻ (ISSN: 2354-1105).</p>
-                    </div>
-                </div>
-                <div class="achievement-item animate-on-scroll">
-                    <div class="timeline-dot">
-                        <div class="dot-inner"></div>
-                    </div>
-                    <div class="achievement-content">
-                        <div class="achievement-badge">Excellence</div>
-                        <div class="achievement-date">2023-2024</div>
-                        <h3 data-vi="Sinh viên 5 tốt UTH" data-en="UTH Five-Good Student" data-zh="UTH 五好学生">Sinh viên 5 tốt UTH</h3>
-                        <h4 data-vi="Trường Đại học Giao thông Vận tải TP.HCM" data-en="Ho Chi Minh City University of Transport" data-zh="胡志明市交通运输大学">Trường Đại học Giao thông Vận tải TP.HCM</h4>
-                        <p data-vi="Đạt danh hiệu 'Sinh viên 5 tốt UTH' năm học 2023-2024, ghi nhận sự phát triển toàn diện trong học tập, kỹ năng và hoạt động cộng đồng." data-en="Awarded the 'UTH Five-Good Student' title for the 2023-2024 academic year, recognizing well-rounded achievement in academics, skills, and community engagement." data-zh="获得 2023-2024 学年 'UTH 五好学生' 称号，体现学术、技能与社区参与的全面发展。">Đạt danh hiệu 'Sinh viên 5 tốt UTH' năm học 2023-2024, ghi nhận sự phát triển toàn diện trong học tập, kỹ năng và hoạt động cộng đồng.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Professional Certifications -->
-            <div class="certifications-section animate-on-scroll">
-                <h3 class="subsection-title" data-vi="Điểm nhấn & Cộng đồng" data-en="Highlights & Communities" data-zh="亮点与社群">Điểm nhấn & Cộng đồng</h3>
-                <div class="certifications-grid">
-                    <div class="cert-card animate-on-scroll">
-                        <div class="cert-icon">
-                            <ion-icon name="accessibility-outline"></ion-icon>
-                        </div>
-                        <div class="cert-content">
-                            <h4 data-vi="Huấn luyện viên Yoga (RYT-200)" data-en="Certified Yoga Instructor (RYT-200)" data-zh="认证瑜伽教练（RYT-200）">Huấn luyện viên Yoga (RYT-200)</h4>
-                            <p data-vi="Yoga Alliance" data-en="Yoga Alliance" data-zh="Yoga Alliance">Yoga Alliance</p>
-                            <span class="cert-status" data-vi="Hiệu lực" data-en="Active" data-zh="有效">Hiệu lực</span>
-                        </div>
-                    </div>
-
-                    <div class="cert-card animate-on-scroll">
-                        <div class="cert-icon">
-                            <ion-icon name="document-text-outline"></ion-icon>
-                        </div>
-                        <div class="cert-content">
-                            <h4 data-vi="3 bài báo cáo & nghiên cứu AI" data-en="3 AI Papers & Research Contributions" data-zh="3 项 AI 论文与研究成果">3 bài báo cáo & nghiên cứu AI</h4>
-                            <p data-vi="Hội thảo và kỷ yếu chuyên ngành" data-en="Conference proceedings and research forums" data-zh="会议论文集与研究论坛">Hội thảo và kỷ yếu chuyên ngành</p>
-                            <span class="cert-status" data-vi="Đã công bố" data-en="Published" data-zh="已发表">Đã công bố</span>
-                        </div>
-                    </div>
-
-                    <div class="cert-card animate-on-scroll">
-                        <div class="cert-icon">
-                            <ion-icon name="people-outline"></ion-icon>
-                        </div>
-                        <div class="cert-content">
-                            <h4 data-vi="1K+ người theo dõi TikTok" data-en="1K+ TikTok Followers" data-zh="TikTok 1K+ 关注者">1K+ người theo dõi TikTok</h4>
-                            <p data-vi="Ảnh hưởng nội dung số" data-en="Digital Content Impact" data-zh="数字内容影响力">Ảnh hưởng nội dung số</p>
-                            <span class="cert-status" data-vi="Đang phát triển" data-en="Growing" data-zh="持续增长">Đang phát triển</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Nonprofit & Research Projects Section (Achievements) -->
-            <div class="nonprofit-section animate-on-scroll">
-                <h3 class="subsection-title" data-vi="Dự án Phi lợi nhuận & Nghiên cứu" data-en="Nonprofit & Research Projects" data-zh="公益与研究项目">Dự án Phi lợi nhuận & Nghiên cứu</h3>
-                <div class="nonprofit-grid">
-                    <div class="nonprofit-card animate-on-scroll gsa-card">
-                        <a href="img/GSA.png" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;display:block;">
-                            <div class="nonprofit-banner">
-                                <img src="img/GSA.png" alt="Google Student Ambassador banner">
-                            </div>
-                            <div class="nonprofit-content">
-                                <h4 data-vi="Google Student Ambassador" data-en="Google Student Ambassador" data-zh="Google 学生大使">Google Student Ambassador</h4>
-                                <p class="nonprofit-org" data-vi="Google for Students • #TeamGoogle" data-en="Google for Students • #TeamGoogle" data-zh="Google for Students • #TeamGoogle">Google for Students • #TeamGoogle</p>
-                                <p data-vi="Tham gia cộng đồng đại sứ sinh viên, lan tỏa tinh thần học công nghệ, chia sẻ kỹ năng số và kết nối sinh viên với những hoạt động mang tính ứng dụng và tạo ra tác động tích cực." data-en="Contributed to the student ambassador community by promoting technology learning, sharing digital skills, and connecting students with practical, impact-driven activities." data-zh="参与学生大使社群建设，推动技术学习、数字技能分享，并连接学生与兼具实践价值和积极影响力的活动。">Tham gia cộng đồng đại sứ sinh viên, lan tỏa tinh thần học công nghệ, chia sẻ kỹ năng số và kết nối sinh viên với những hoạt động mang tính ứng dụng và tạo ra tác động tích cực.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="nonprofit-card animate-on-scroll">
-                        <a href="https://tuhoc50.com/" target="_blank" rel="noopener noreferrer" class="nonprofit-link">
-                            <div class="nonprofit-logo-wrap">
-                                <img src="img/tuhoc50.png" alt="Tự học 5.0" class="nonprofit-logo">
-                            </div>
-                            <div class="nonprofit-content">
-                                <h4 data-vi="Dự án Tự học 5.0" data-en="Self-learning 5.0 Project" data-zh="自主学习 5.0 项目">Dự án Tự học 5.0</h4>
-                                <p class="nonprofit-org" data-vi="Th.S Triệu Nguyễn Huyền Trang - Học viện Ngoại giao (DAV)" data-en="Ms. Trieu Nguyen Huyen Trang - Diplomatic Academy of Vietnam (DAV)" data-zh="Triệu Nguyễn Huyền Trang 硕士 - 越南外交学院（DAV）">Th.S Triệu Nguyễn Huyền Trang - Học viện Ngoại giao (DAV)</p>
-                                <p data-vi="Khuyến khích thói quen tự học chủ động, hiệu quả cho học sinh và sinh viên." data-en="Promoted proactive and effective self-learning habits for students." data-zh="推动学生建立更主动、更高效的自主学习习惯。">Khuyến khích thói quen tự học chủ động, hiệu quả cho học sinh và sinh viên.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="nonprofit-card animate-on-scroll">
-                        <a href="https://vanhocyeulaitudau.com/" target="_blank" rel="noopener noreferrer" class="nonprofit-link">
-                            <div class="nonprofit-logo-wrap">
-                                <img src="img/vhyltd.png" alt="Văn học Yêu lại từ đầu" class="nonprofit-logo">
-                            </div>
-                            <div class="nonprofit-content">
-                                <h4 data-vi="Văn học - Yêu lại từ đầu" data-en="Literature - Love Again" data-zh="文学，从重新热爱开始">Văn học - Yêu lại từ đầu</h4>
-                                <p class="nonprofit-org" data-vi="Th.S Triệu Nguyễn Huyền Trang - Học viện Ngoại giao (DAV)" data-en="Ms. Trieu Nguyen Huyen Trang - Diplomatic Academy of Vietnam (DAV)" data-zh="Triệu Nguyễn Huyền Trang 硕士 - 越南外交学院（DAV）">Th.S Triệu Nguyễn Huyền Trang - Học viện Ngoại giao (DAV)</p>
-                                <p data-vi="Tham gia dự án phi lợi nhuận lan tỏa tình yêu văn học cho giới trẻ." data-en="Participated in a nonprofit project that inspired young people to reconnect with literature." data-zh="参与公益项目，帮助年轻人重新发现文学的吸引力。">Tham gia dự án phi lợi nhuận lan tỏa tình yêu văn học cho giới trẻ.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="nonprofit-card animate-on-scroll">
-                        <a href="https://yenvan.edu.vn/" target="_blank" rel="noopener noreferrer" class="nonprofit-link">
-                            <div class="nonprofit-logo-wrap">
-                                <img src="img/logoyenvan.png" alt="Yên Văn" class="nonprofit-logo">
-                            </div>
-                            <div class="nonprofit-content">
-                                <h4 data-vi="Dự án Yên Văn" data-en="Yen Van Project" data-zh="Yên Văn 项目">Dự án Yên Văn</h4>
-                                <p class="nonprofit-org" data-vi="Th.S Triệu Nguyễn Huyền Trang - Học viện Ngoại giao (DAV)" data-en="Ms. Trieu Nguyen Huyen Trang - Diplomatic Academy of Vietnam (DAV)" data-zh="Triệu Nguyễn Huyền Trang 硕士 - 越南外交学院（DAV）">Th.S Triệu Nguyễn Huyền Trang - Học viện Ngoại giao (DAV)</p>
-                                <p data-vi="Xây dựng phương pháp học văn hiệu quả và sáng tạo cho học sinh, sinh viên." data-en="Built creative and effective literature-learning methods for students." data-zh="为学生打造更有效、更有创意的文学学习方法。">Xây dựng phương pháp học văn hiệu quả và sáng tạo cho học sinh, sinh viên.</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="skills" class="section-container">
-        <div class="section-header">
-            <span class="section-number">04</span>
-            <h2 class="section-title animate-on-scroll" data-vi="Kỹ năng chuyên môn" data-en="Technical Skills" data-zh="专业技能">Kỹ năng chuyên môn</h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="skills-container">
-            <div class="skills-grid">
-                <div class="skill-category animate-on-scroll">
-                    <div class="category-header">
-                        <div class="category-icon">
-                            <ion-icon name="code-slash-outline"></ion-icon>
-                        </div>
-                        <h3 data-vi="Ngôn ngữ lập trình" data-en="Programming Languages" data-zh="编程语言">Ngôn ngữ lập trình</h3>
-                    </div>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Python</span>
-                                <span class="skill-percentage">90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Java</span>
-                                <span class="skill-percentage">90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">JavaScript</span>
-                                <span class="skill-percentage">80%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="80"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">C++</span>
-                                <span class="skill-percentage">85%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill-category animate-on-scroll">
-                    <div class="category-header">
-                        <div class="category-icon">
-                            <ion-icon name="hardware-chip-outline"></ion-icon>
-                        </div>
-                        <h3 data-vi="Framework AI/ML" data-en="AI/ML Frameworks" data-zh="AI/ML 框架">Framework AI/ML</h3>
-                    </div>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">TensorFlow</span>
-                                <span class="skill-percentage">85%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">PyTorch</span>
-                                <span class="skill-percentage">80%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="80"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Scikit-learn</span>
-                                <span class="skill-percentage">90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill-category animate-on-scroll">
-                    <div class="category-header">
-                        <div class="category-icon">
-                            <ion-icon name="eye-outline"></ion-icon>
-                        </div>
-                        <h3 data-vi="Chuyên môn sâu" data-en="Specializations" data-zh="专业方向">Chuyên môn sâu</h3>
-                    </div>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Computer Vision</span>
-                                <span class="skill-percentage">85%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">GANs & Deep Learning</span>
-                                <span class="skill-percentage">80%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="80"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Data Analysis</span>
-                                <span class="skill-percentage">88%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="88"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Technology Icons Cloud -->
-            <div class="tech-cloud animate-on-scroll">
-                <div class="tech-item">
-                    <ion-icon name="logo-python"></ion-icon>
-                    <span>Python</span>
-                </div>
-                <div class="tech-item">
-                    <ion-icon name="logo-javascript"></ion-icon>
-                    <span>JavaScript</span>
-                </div>
-                <div class="tech-item">
-                    <ion-icon name="logo-react"></ion-icon>
-                    <span>React</span>
-                </div>
-                <div class="tech-item">
-                    <ion-icon name="logo-nodejs"></ion-icon>
-                    <span>Node.js</span>
-                </div>
-                <div class="tech-item">
-                    <ion-icon name="logo-github"></ion-icon>
-                    <span>Git</span>
-                </div>
-                <div class="tech-item">
-                    <ion-icon name="logo-docker"></ion-icon>
-                    <span>Docker</span>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Hobbies Section -->
-    <section id="hobbies" class="section-container dark-section">
-        <div class="section-header">
-            <span class="section-number">05</span>
-            <h2 class="section-title animate-on-scroll" data-vi="Sở thích" data-en="Hobbies" data-zh="兴趣与生活">Sở thích</h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="hobbies-container">
-            <div class="hobbies-grid">
-                <div class="hobby-card animate-on-scroll">
-                    <div class="hobby-icon">
-                        <ion-icon name="accessibility-outline"></ion-icon>
-                    </div>
-                    <div class="hobby-content">
-                        <h3 data-vi="Yoga & Sức khỏe" data-en="Yoga & Wellness" data-zh="瑜伽与健康">Yoga & Sức khỏe</h3>
-                        <p data-vi="Huấn luyện viên yoga được chứng nhận, đam mê sức khỏe toàn diện và cân bằng thân - tâm - trí. Tổ chức các lớp yoga và sáng tạo nội dung về sức khỏe." data-en="Certified yoga instructor passionate about holistic health and mind-body balance. Organizing yoga classes and creating wellness content." data-zh="持证瑜伽教练，关注整体健康与身心平衡，也持续开展瑜伽课程与健康内容创作。">Huấn luyện viên yoga được chứng nhận, đam mê sức khỏe toàn diện và cân bằng thân - tâm - trí. Tổ chức các lớp yoga và sáng tạo nội dung về sức khỏe.</p>
-                        <div class="hobby-tags">
-                            <span data-vi="Chứng nhận RYT-200" data-en="RYT-200 Certified" data-zh="RYT-200 认证">Chứng nhận RYT-200</span>
-                            <span data-vi="Huấn luyện sức khỏe" data-en="Wellness Coaching" data-zh="健康指导">Huấn luyện sức khỏe</span>
-                            <span data-vi="Chánh niệm" data-en="Mindfulness" data-zh="正念">Chánh niệm</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="hobby-card animate-on-scroll">
-                    <div class="hobby-icon">
-                        <ion-icon name="videocam-outline"></ion-icon>
-                    </div>
-                    <div class="hobby-content">
-                        <h3 data-vi="Sáng tạo nội dung" data-en="Content Creation" data-zh="内容创作">Sáng tạo nội dung</h3>
-                        <p data-vi="Sáng tạo nội dung giáo dục trên TikTok với hơn 1K người theo dõi, tập trung vào công nghệ và sức khỏe số." data-en="Creating educational content on TikTok with over 1K followers, focusing on technology and digital wellness." data-zh="在 TikTok 持续创作教育内容，围绕科技与数字健康，已吸引 1K+ 关注者。">Sáng tạo nội dung giáo dục trên TikTok với hơn 1K người theo dõi, tập trung vào công nghệ và sức khỏe số.</p>
-                        <div class="hobby-tags">
-                            <span data-vi="Dựng video" data-en="Video Editing" data-zh="视频剪辑">Dựng video</span>
-                            <span data-vi="Mạng xã hội" data-en="Social Media" data-zh="社交媒体">Mạng xã hội</span>
-                            <span data-vi="Giáo dục" data-en="Education" data-zh="教育">Giáo dục</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="hobby-card animate-on-scroll">
-                    <div class="hobby-icon">
-                        <ion-icon name="library-outline"></ion-icon>
-                    </div>
-                    <div class="hobby-content">
-                        <h3 data-vi="Nghiên cứu & Học tập" data-en="Research & Self-learning" data-zh="研究与自学">Nghiên cứu & Học tập</h3>
-                        <p data-vi="Đam mê nghiên cứu công nghệ AI, tham gia hội thảo khoa học và liên tục cập nhật kiến thức mới." data-en="Passionate about AI research, scientific conferences, and continuous learning." data-zh="热爱 AI 研究，积极参加学术活动，并持续保持自我学习。">Đam mê nghiên cứu công nghệ AI, tham gia hội thảo khoa học và liên tục cập nhật kiến thức mới.</p>
-                        <div class="hobby-tags">
-                            <span data-vi="Nghiên cứu" data-en="Research" data-zh="研究">Nghiên cứu</span>
-                            <span data-vi="Tự học" data-en="Self-learning" data-zh="自学">Tự học</span>
-                            <span data-vi="Đổi mới sáng tạo" data-en="Innovation" data-zh="创新">Đổi mới sáng tạo</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="hobby-card animate-on-scroll">
-                    <div class="hobby-icon">
-                        <ion-icon name="people-outline"></ion-icon>
-                    </div>
-                    <div class="hobby-content">
-                        <h3 data-vi="Hoạt động tình nguyện" data-en="Community Service" data-zh="志愿服务">Hoạt động tình nguyện</h3>
-                        <p data-vi="Tham gia các dự án tình nguyện, đặc biệt trong giáo dục và phát triển cộng đồng." data-en="Participating in volunteer projects, especially in education and community development." data-zh="积极参与志愿项目，尤其关注教育与社区发展。">Tham gia các dự án tình nguyện, đặc biệt trong giáo dục và phát triển cộng đồng.</p>
-                        <div class="hobby-tags">
-                            <span data-vi="Cộng đồng" data-en="Community Service" data-zh="社区服务">Cộng đồng</span>
-                            <span data-vi="Giáo dục" data-en="Education" data-zh="教育">Giáo dục</span>
-                            <span data-vi="Tác động xã hội" data-en="Social Impact" data-zh="社会影响">Tác động xã hội</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="hobby-card animate-on-scroll">
-                    <div class="hobby-icon">
-                        <ion-icon name="camera-outline"></ion-icon>
-                    </div>
-                    <div class="hobby-content">
-                        <h3 data-vi="Nhiếp ảnh & Thiết kế" data-en="Photography & Design" data-zh="摄影与设计">Nhiếp ảnh & Thiết kế</h3>
-                        <p data-vi="Yêu thích chụp ảnh và thiết kế, kết hợp sáng tạo với công nghệ để tạo ra sản phẩm thị giác ấn tượng." data-en="Passionate about photography and design, combining creativity and technology to create compelling visual work." data-zh="热爱摄影与设计，擅长把创意与技术结合成更有表现力的视觉作品。">Yêu thích chụp ảnh và thiết kế, kết hợp sáng tạo với công nghệ để tạo ra sản phẩm thị giác ấn tượng.</p>
-                        <div class="hobby-tags">
-                            <span data-vi="Thiết kế thị giác" data-en="Visual Design" data-zh="视觉设计">Thiết kế thị giác</span>
-                            <span data-vi="Nghệ thuật sáng tạo" data-en="Creative Arts" data-zh="创意艺术">Nghệ thuật sáng tạo</span>
-                            <span data-vi="Truyền thông số" data-en="Digital Media" data-zh="数字媒体">Truyền thông số</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="hobby-card animate-on-scroll">
-                    <div class="hobby-icon">
-                        <ion-icon name="book-outline"></ion-icon>
-                    </div>
-                    <div class="hobby-content">
-                        <h3 data-vi="Đọc sách & Văn học" data-en="Reading & Literature" data-zh="阅读与文学">Đọc sách & Văn học</h3>
-                        <p data-vi="Tham gia dự án 'Văn học - Yêu lại từ đầu', khơi gợi tình yêu văn học và xây dựng thói quen đọc sách cho thế hệ trẻ." data-en="Participating in the 'Literature - Love Again' project, inspiring a love of literature and stronger reading habits among young people." data-zh="参与 '文学，从重新热爱开始' 项目，帮助年轻人重新建立对文学与阅读的兴趣。">Tham gia dự án 'Văn học - Yêu lại từ đầu', khơi gợi tình yêu văn học và xây dựng thói quen đọc sách cho thế hệ trẻ.</p>
-                        <div class="hobby-tags">
-                            <span data-vi="Văn học" data-en="Literature" data-zh="文学">Văn học</span>
-                            <span data-vi="Đọc sách" data-en="Reading" data-zh="阅读">Đọc sách</span>
-                            <span data-vi="Dự án văn hóa" data-en="Cultural Projects" data-zh="文化项目">Dự án văn hóa</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Languages Section -->
-    <section id="languages" class="section-container">
-        <div class="section-header">
-            <span class="section-number">06</span>
-            <h2 class="section-title animate-on-scroll" data-vi="Ngôn ngữ" data-en="Languages" data-zh="语言能力">Ngôn ngữ</h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="languages-container">
-            <div class="languages-grid">
-                <div class="language-card animate-on-scroll">
-                    <div class="language-flag">
-                        <img src="https://flagcdn.com/w80/vn.png" alt="Vietnamese Flag" width="40" height="30">
-                    </div>
-                    <div class="language-info">
-                        <h3 data-vi="Tiếng Việt" data-en="Vietnamese" data-zh="越南语">Tiếng Việt</h3>
-                        <p data-vi="Ngôn ngữ mẹ đẻ" data-en="Native speaker" data-zh="母语">Ngôn ngữ mẹ đẻ</p>
-                        <div class="language-level">
-                            <div class="level-bars">
-                                <div class="level-bar active"></div>
-                                <div class="level-bar active"></div>
-                                <div class="level-bar active"></div>
-                                <div class="level-bar active"></div>
-                                <div class="level-bar active"></div>
-                            </div>
-                            <span class="level-text" data-vi="Bản ngữ" data-en="Native" data-zh="母语">Bản ngữ</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="language-card animate-on-scroll">
-                    <div class="language-flag">
-                        <img src="https://flagcdn.com/w80/us.png" alt="English Flag" width="40" height="30">
-                    </div>
-                    <div class="language-info">
-                        <h3 data-vi="Tiếng Anh" data-en="English" data-zh="英语">Tiếng Anh</h3>
-                        <p data-vi="Giao tiếp chuyên môn tốt, đọc hiểu tài liệu kỹ thuật" data-en="Strong technical communication and reading skills" data-zh="具备较强的专业沟通与技术文档阅读能力">Giao tiếp chuyên môn tốt, đọc hiểu tài liệu kỹ thuật</p>
-                        <div class="language-level">
-                            <div class="level-bars">
-                                <div class="level-bar active"></div>
-                                <div class="level-bar active"></div>
-                                <div class="level-bar active"></div>
-                                <div class="level-bar active"></div>
-                                <div class="level-bar"></div>
-                            </div>
-                            <span class="level-text" data-vi="B2" data-en="B2">B2</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="language-card animate-on-scroll">
-                    <div class="language-flag">
-                        <img src="https://flagcdn.com/w80/cn.png" alt="Chinese Flag" width="40" height="30">
-                    </div>
-                    <div class="language-info">
-                        <h3 data-vi="Tiếng Trung" data-en="Chinese" data-zh="中文">Tiếng Trung</h3>
-                        <p data-vi="HSK3 - Giao tiếp cơ bản" data-en="HSK3 - Basic communication" data-zh="HSK3 - 基础交流">HSK3 - Giao tiếp cơ bản</p>
-                        <div class="language-level">
-                            <div class="level-bars">
-                                <div class="level-bar active"></div>
-                                <div class="level-bar active"></div>
-                                <div class="level-bar active"></div>
-                                <div class="level-bar"></div>
-                                <div class="level-bar"></div>
-                            </div>
-                            <span class="level-text" data-vi="HSK3" data-en="HSK3">HSK3</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="language-certificates animate-on-scroll">
-                <h3 data-vi="Năng lực ngôn ngữ" data-en="Language Background" data-zh="语言基础">Năng lực ngôn ngữ</h3>
-                <div class="cert-list">
-                    <div class="cert-item">
-                        <ion-icon name="medal-outline"></ion-icon>
-                        <span data-vi="Tiếng Anh học thuật và chuyên ngành" data-en="Academic and Technical English" data-zh="学术英语与技术英语">Tiếng Anh học thuật và chuyên ngành</span>
-                    </div>
-                    <div class="cert-item">
-                        <ion-icon name="school-outline"></ion-icon>
-                        <span data-vi="Tiếng Trung trình độ HSK3" data-en="Chinese at HSK3 level" data-zh="中文 HSK3 水平">Tiếng Trung trình độ HSK3</span>
-                    </div>
-                </div>            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="section-container dark-section">
-        <div class="section-header">
-            <span class="section-number">07</span>
-            <h2 class="section-title animate-on-scroll" data-vi="Dự án tiêu biểu" data-en="Featured Projects" data-zh="重点项目">Dự án tiêu biểu</h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="projects-grid">
-            <div class="project-card animate-on-scroll" data-tilt>
-                <div class="project-image">
-                    <img src="img/DLtumor.jpg" alt="GAN Brain Imaging Project">
-                    <div class="project-overlay">
-                        <div class="overlay-content">
-                            <ion-icon name="eye-outline"></ion-icon>
-                            <span data-vi="Xem dự án" data-en="View Project" data-zh="查看项目">Xem dự án</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-content">
-                    <div class="project-category" data-vi="Machine Learning" data-en="Machine Learning" data-zh="机器学习">Machine Learning</div>
-                    <h3 data-vi="Tăng cường ảnh não bằng GAN" data-en="GAN-based Brain Imaging Enhancement" data-zh="基于 GAN 的脑部影像增强">Tăng cường ảnh não bằng GAN</h3>
-                    <p data-vi="Phát triển mô hình GAN để nâng cao chất lượng ảnh y khoa não bộ, hỗ trợ cải thiện độ chính xác chẩn đoán và giảm thời gian xử lý." data-en="Developed a GAN model to enhance brain medical imaging quality, helping improve diagnostic accuracy and reduce processing time." data-zh="开发 GAN 模型以提升脑部医学影像质量，帮助提高诊断准确度并缩短处理时间。">Phát triển mô hình GAN để nâng cao chất lượng ảnh y khoa não bộ, hỗ trợ cải thiện độ chính xác chẩn đoán và giảm thời gian xử lý.</p>
-                    <div class="project-stats">
-                        <div class="stat">
-                            <span class="stat-value">40%</span>
-                            <span class="stat-label" data-vi="Tăng độ chính xác" data-en="Accuracy Improvement" data-zh="准确度提升">Tăng độ chính xác</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-value">25%</span>
-                            <span class="stat-label" data-vi="Giảm thời gian" data-en="Time Reduction" data-zh="时间缩短">Giảm thời gian</span>
-                        </div>
-                    </div>
-                    <div class="project-tech">
-                        <span data-vi="Python" data-en="Python" data-zh="Python">Python</span>
-                        <span data-vi="TensorFlow" data-en="TensorFlow" data-zh="TensorFlow">TensorFlow</span>
-                        <span data-vi="Computer Vision" data-en="Computer Vision" data-zh="计算机视觉">Computer Vision</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/giahuy0968" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
-                            <ion-icon name="logo-github"></ion-icon>
-                        </a>
-                        <a href="#contact" class="project-link" aria-label="Contact about this project">
-                            <ion-icon name="open-outline"></ion-icon>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="project-card animate-on-scroll" data-tilt>
-                <div class="project-image">
-                    <img src="img/MLlogistics.jpg" alt="Logistics Optimization">
-                    <div class="project-overlay">
-                        <div class="overlay-content">
-                            <ion-icon name="eye-outline"></ion-icon>
-                            <span data-vi="Xem dự án" data-en="View Project" data-zh="查看项目">Xem dự án</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-content">
-                    <div class="project-category" data-vi="Tối ưu hóa" data-en="Optimization" data-zh="优化">Tối ưu hóa</div>
-                    <h3 data-vi="Tối ưu logistics bằng AI" data-en="AI-Powered Logistics Optimization" data-zh="AI 驱动的物流优化">Tối ưu logistics bằng AI</h3>
-                    <p data-vi="Xây dựng mô hình machine learning để tối ưu tuyến giao hàng và vận hành kho, giúp giảm chi phí và tăng hiệu suất." data-en="Built machine learning models to optimize delivery routes and warehouse operations, reducing cost and improving efficiency." data-zh="构建机器学习模型以优化配送路线与仓储运作，降低成本并提升效率。">Xây dựng mô hình machine learning để tối ưu tuyến giao hàng và vận hành kho, giúp giảm chi phí và tăng hiệu suất.</p>
-                    <div class="project-stats">
-                        <div class="stat">
-                            <span class="stat-value">30%</span>
-                            <span class="stat-label" data-vi="Giảm chi phí" data-en="Cost Reduction" data-zh="成本下降">Giảm chi phí</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-value">95%</span>
-                            <span class="stat-label" data-vi="Độ chính xác" data-en="Accuracy" data-zh="准确度">Độ chính xác</span>
-                        </div>
-                    </div>
-                    <div class="project-tech">
-                        <span data-vi="Python" data-en="Python" data-zh="Python">Python</span>
-                        <span data-vi="Scikit-learn" data-en="Scikit-learn" data-zh="Scikit-learn">Scikit-learn</span>
-                        <span data-vi="Phân tích dữ liệu" data-en="Data Analysis" data-zh="数据分析">Phân tích dữ liệu</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/giahuy0968" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
-                            <ion-icon name="logo-github"></ion-icon>
-                        </a>
-                        <a href="#contact" class="project-link" aria-label="Contact about this project">
-                            <ion-icon name="open-outline"></ion-icon>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="project-card animate-on-scroll" data-tilt>
-                <div class="project-image">
-                    <img src="img/realtime.jpg" alt="Fatigue Detection System">
-                    <div class="project-overlay">
-                        <div class="overlay-content">
-                            <ion-icon name="eye-outline"></ion-icon>
-                            <span data-vi="Xem dự án" data-en="View Project" data-zh="查看项目">Xem dự án</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-content">
-                    <div class="project-category" data-vi="Computer Vision" data-en="Computer Vision" data-zh="计算机视觉">Computer Vision</div>
-                    <h3 data-vi="Hệ thống phát hiện mệt mỏi thời gian thực" data-en="Real-time Fatigue Detection System" data-zh="实时疲劳检测系统">Hệ thống phát hiện mệt mỏi thời gian thực</h3>
-                    <p data-vi="Xây dựng hệ thống AI dùng computer vision để phát hiện trạng thái mệt mỏi của tài xế theo thời gian thực, góp phần tăng an toàn giao thông." data-en="Created an AI system using computer vision to detect driver fatigue in real time and support road safety." data-zh="构建基于计算机视觉的 AI 系统，用于实时检测驾驶疲劳并提升道路安全。">Xây dựng hệ thống AI dùng computer vision để phát hiện trạng thái mệt mỏi của tài xế theo thời gian thực, góp phần tăng an toàn giao thông.</p>
-                    <div class="project-stats">
-                        <div class="stat">
-                            <span class="stat-value" data-vi="Realtime" data-en="Real-time" data-zh="实时">Realtime</span>
-                            <span class="stat-label" data-vi="Xử lý" data-en="Processing" data-zh="处理">Xử lý</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-value">92%</span>
-                            <span class="stat-label" data-vi="Tỷ lệ phát hiện" data-en="Detection Rate" data-zh="检测率">Tỷ lệ phát hiện</span>
-                        </div>
-                    </div>
-                    <div class="project-tech">
-                        <span data-vi="OpenCV" data-en="OpenCV" data-zh="OpenCV">OpenCV</span>
-                        <span data-vi="PyTorch" data-en="PyTorch" data-zh="PyTorch">PyTorch</span>
-                        <span data-vi="Xử lý thời gian thực" data-en="Real-time Processing" data-zh="实时处理">Xử lý thời gian thực</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/giahuy0968" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
-                            <ion-icon name="logo-github"></ion-icon>
-                        </a>
-                        <a href="#contact" class="project-link" aria-label="Contact about this project">
-                            <ion-icon name="open-outline"></ion-icon>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="project-card animate-on-scroll" data-tilt>
-                <div class="project-image">
-                    <img src="img/yoga.jpg" alt="Yoga Content Creation">
-                    <div class="project-overlay">
-                        <div class="overlay-content">
-                            <ion-icon name="eye-outline"></ion-icon>
-                            <span data-vi="Xem dự án" data-en="View Project" data-zh="查看项目">Xem dự án</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-content">
-                    <div class="project-category" data-vi="Sức khỏe số" data-en="Digital Wellness" data-zh="数字健康">Sức khỏe số</div>
-                    <h3 data-vi="Nền tảng nội dung sức khỏe số" data-en="Digital Wellness Platform" data-zh="数字健康内容平台">Nền tảng nội dung sức khỏe số</h3>
-                    <p data-vi="Phát triển kênh TikTok hơn 1K người theo dõi thông qua nội dung yoga giáo dục, kết nối công nghệ với sức khỏe trong môi trường số." data-en="Grew a TikTok presence to 1K+ followers through educational yoga content, connecting technology and wellness in digital spaces." data-zh="通过教育型瑜伽内容把 TikTok 社群发展到 1K+ 关注者，在数字环境中连接科技与健康。">Phát triển kênh TikTok hơn 1K người theo dõi thông qua nội dung yoga giáo dục, kết nối công nghệ với sức khỏe trong môi trường số.</p>
-                    <div class="project-stats">
-                        <div class="stat">
-                            <span class="stat-value">1K+</span>
-                            <span class="stat-label" data-vi="Người theo dõi" data-en="Followers" data-zh="关注者">Người theo dõi</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-value">1M+</span>
-                            <span class="stat-label" data-vi="Lượt xem" data-en="Views" data-zh="浏览量">Lượt xem</span>
-                        </div>
-                    </div>
-                    <div class="project-tech">
-                        <span data-vi="Chiến lược nội dung" data-en="Content Strategy" data-zh="内容策略">Chiến lược nội dung</span>
-                        <span data-vi="Mạng xã hội" data-en="Social Media" data-zh="社交媒体">Mạng xã hội</span>
-                        <span data-vi="Giáo dục sức khỏe" data-en="Wellness Education" data-zh="健康教育">Giáo dục sức khỏe</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://www.tiktok.com/@huylearnhub?lang=vi-VN" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="TikTok profile">
-                            <ion-icon name="logo-tiktok"></ion-icon>
-                        </a>
-                        <a href="#contact" class="project-link" aria-label="Contact about this project">
-                            <ion-icon name="open-outline"></ion-icon>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="contact" class="section-container">
-        <div class="section-header">
-            <span class="section-number">08</span>
-            <h2 class="section-title animate-on-scroll" data-vi="Liên hệ" data-en="Get In Touch" data-zh="联系我">Liên hệ</h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="contact-container">
-            <div class="contact-content animate-on-scroll">
-                <div class="contact-text">
-                    <h3 data-vi="Tôi rất vui nếu được kết nối cùng bạn" data-en="I’d love to hear from you" data-zh="很高兴和你建立联系">Tôi rất vui nếu được kết nối cùng bạn</h3>
-                    <p data-vi="Tôi luôn sẵn sàng trao đổi về cơ hội mới, dự án hợp tác, hoặc những cuộc trò chuyện xoay quanh công nghệ và sức khỏe." data-en="I’m always open to new opportunities, collaborations, and thoughtful conversations around technology and well-being." data-zh="我一直乐于交流新的合作机会，也欢迎围绕科技与身心健康展开更深入的对话。">Tôi luôn sẵn sàng trao đổi về cơ hội mới, dự án hợp tác, hoặc những cuộc trò chuyện xoay quanh công nghệ và sức khỏe.</p>
-                    <p data-vi="Nếu bạn có dự án muốn hợp tác, muốn trao đổi về AI, hoặc cần hỗ trợ cho một chương trình sức khỏe, hãy để lại lời nhắn cho tôi." data-en="If you have a project in mind, want to talk about AI, or need support for a wellness program, feel free to send me a message." data-zh="如果你正在筹备项目、想交流 AI，或需要健康项目方面的支持，欢迎给我留言。">Nếu bạn có dự án muốn hợp tác, muốn trao đổi về AI, hoặc cần hỗ trợ cho một chương trình sức khỏe, hãy để lại lời nhắn cho tôi.</p>
-                </div>
-                
-                <div class="contact-form">
-                    <form class="form-container">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <input type="text" id="name" name="from_name" required data-vi-placeholder="Họ và tên" data-en-placeholder="Your name" data-zh-placeholder="你的姓名">
-                                <label for="name" data-vi="Họ tên của bạn" data-en="Your Name" data-zh="你的姓名">Họ tên của bạn</label>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" id="email" name="email" required data-vi-placeholder="Email của bạn" data-en-placeholder="Your email" data-zh-placeholder="你的邮箱">
-                                <label for="email" data-vi="Email của bạn" data-en="Your Email" data-zh="你的邮箱">Email của bạn</label>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" name="subject" required data-vi-placeholder="Chủ đề" data-en-placeholder="Subject" data-zh-placeholder="主题">
-                            <label for="subject" data-vi="Chủ đề" data-en="Subject" data-zh="主题">Chủ đề</label>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" required data-vi-placeholder="Nội dung bạn muốn gửi" data-en-placeholder="Your message" data-zh-placeholder="你想发送的内容"></textarea>
-                            <label for="message" data-vi="Nội dung" data-en="Your Message" data-zh="留言内容">Nội dung</label>
-                        </div>
-                        <input type="hidden" id="formSubjectMeta" name="_subject" value="Portfolio contact from Nguyen Gia Huy">
-                        <input type="hidden" name="_template" value="table">
-                        <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off">
-                        <p class="form-note" data-vi="Tin nhắn sẽ được gửi trực tiếp từ website đến email của tôi." data-en="Your message will be sent directly from this website to my inbox." data-zh="你的消息会直接从网站发送到我的邮箱。">Tin nhắn sẽ được gửi trực tiếp từ website đến email của tôi.</p>
-                        <button type="submit" class="submit-btn">
-                            <span data-vi="Gửi tin nhắn" data-en="Send Message" data-zh="发送消息">Gửi tin nhắn</span>
-                            <ion-icon name="send-outline"></ion-icon>
-                        </button>
-                    </form>
-                </div>
-            </div>
-            
-            <div class="contact-info animate-on-scroll">
-                <div class="contact-methods">
-                    <div class="contact-method">
-                        <div class="method-icon">
-                            <ion-icon name="mail-outline"></ion-icon>
-                        </div>
-                        <div class="method-content">
-                            <h4 data-vi="Email" data-en="Email" data-zh="邮箱">Email</h4>
-                            <p>giahuy.workhard@gmail.com</p>
-                            <a href="mailto:giahuy.workhard@gmail.com" data-vi="Gửi Email" data-en="Send Email" data-zh="发送邮件">Gửi Email</a>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-method">
-                        <div class="method-icon">
-                            <ion-icon name="call-outline"></ion-icon>
-                        </div>
-                        <div class="method-content">
-                            <h4 data-vi="Điện thoại" data-en="Phone" data-zh="电话">Điện thoại</h4>
-                            <p>+84 968038545</p>
-                            <a href="tel:+84968038545" data-vi="Gọi ngay" data-en="Call Now" data-zh="立即拨打">Gọi ngay</a>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-method">
-                        <div class="method-icon">
-                            <ion-icon name="location-outline"></ion-icon>
-                        </div>
-                        <div class="method-content">
-                            <h4 data-vi="Địa chỉ" data-en="Location" data-zh="地点">Địa chỉ</h4>
-                            <p data-vi="TP. Hồ Chí Minh, Việt Nam" data-en="Ho Chi Minh City, Vietnam" data-zh="越南胡志明市">TP. Hồ Chí Minh, Việt Nam</p>
-                            <a href="https://maps.google.com/?q=Ho+Chi+Minh+City+Vietnam" target="_blank" rel="noopener noreferrer" data-vi="Xem bản đồ" data-en="View Map" data-zh="查看地图">Xem bản đồ</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="social-section">
-                    <h4 data-vi="Kết nối với tôi" data-en="Follow Me" data-zh="关注我">Kết nối với tôi</h4>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/gia-huy-nguyen-7bb014349/" target="_blank" rel="noopener noreferrer" class="social-link linkedin">
-                            <ion-icon name="logo-linkedin"></ion-icon>
-                            <span>LinkedIn</span>
-                        </a>
-                        <a href="https://www.tiktok.com/@huylearnhub?lang=vi-VN" target="_blank" rel="noopener noreferrer" class="social-link tiktok">
-                            <ion-icon name="logo-tiktok"></ion-icon>
-                            <span>TikTok</span>
-                        </a>
-                        <a href="https://github.com/giahuy0968" target="_blank" rel="noopener noreferrer" class="social-link github">
-                            <ion-icon name="logo-github"></ion-icon>
-                            <span>GitHub</span>
-                        </a>
-                        <a href="https://www.facebook.com/giahuy0968" target="_blank" rel="noopener noreferrer" class="social-link facebook">
-                            <ion-icon name="logo-facebook"></ion-icon>
-                            <span>Facebook</span>
-                        </a>
-                        <a href="https://www.instagram.com/ndza_hiu02/" target="_blank" rel="noopener noreferrer" class="social-link instagram">
-                            <ion-icon name="logo-instagram"></ion-icon>
-                            <span>Instagram</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-text">
-                <p data-vi="© 2026 Nguyễn Gia Huy. Thiết kế với sự chỉn chu, ấm áp và tinh thần học hỏi." data-en="© 2026 Nguyen Gia Huy. Designed with care, warmth, and a mindset of continuous learning." data-zh="© 2026 阮嘉辉。这个作品集带着认真、温度与持续学习的态度完成。">© 2026 Nguyễn Gia Huy. Thiết kế với sự chỉn chu, ấm áp và tinh thần học hỏi.</p>
-            </div>
-            <div class="footer-links">
-                <a href="#about" data-vi="Giới thiệu" data-en="About" data-zh="关于">Giới thiệu</a>
-                <a href="#experience" data-vi="Kinh nghiệm" data-en="Experience" data-zh="经历">Kinh nghiệm</a>
-                <a href="#achievements" data-vi="Thành tích" data-en="Achievements" data-zh="成果">Thành tích</a>
-                <a href="#skills" data-vi="Kỹ năng" data-en="Skills" data-zh="技能">Kỹ năng</a>
-                <a href="#hobbies" data-vi="Sở thích" data-en="Hobbies" data-zh="兴趣">Sở thích</a>
-                <a href="#languages" data-vi="Ngôn ngữ" data-en="Languages" data-zh="语言">Ngôn ngữ</a>
-                <a href="#projects" data-vi="Dự án" data-en="Projects" data-zh="项目">Dự án</a>
-                <a href="#contact" data-vi="Liên hệ" data-en="Contact" data-zh="联系">Liên hệ</a>
-            </div>
-        </div>
-        <div class="back-to-top" id="backToTop">
-            <ion-icon name="chevron-up-outline"></ion-icon>
-        </div>
-    </footer>
-    <script src="js/script.js"></script>
+</ul>
+</div>
+</div>
+<div class="about-visual animate-on-scroll">
+<div class="visual-element">
+<div class="code-window">
+<div class="window-header">
+<div class="window-controls">
+<span class="control close"></span>
+<span class="control minimize"></span>
+<span class="control maximize"></span>
+</div>
+<span class="window-title">ai_developer.py</span>
+</div>
+<div class="code-content">
+<div class="code-line"><span class="keyword">class</span> <span class="class-name">AIResearcher</span>:</div>
+<div class="code-line"> <span class="keyword">def</span> <span class="function">__init__</span>(self):</div>
+<div class="code-line">        self.name = <span class="string">"Gia Huy"</span></div>
+<div class="code-line">        self.skills = [<span class="string">"AI"</span>, <span class="string">"ML"</span>, <span class="string">"CV"</span>]</div>
+<div class="code-line">        self.passion = <span class="string">"Innovation"</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section> <!-- Work Experience Section -->
+<section class="section-container dark-section" id="experience">
+<div class="section-header">
+<span class="section-number">02</span>
+<h2 class="section-title animate-on-scroll" data-en="Work Experience" data-vi="Kinh nghiệm làm việc" data-zh="工作经历">Kinh nghiệm làm việc</h2>
+<div class="section-line"></div>
+</div>
+<div class="experience-timeline">
+<div class="timeline-line"></div><div class="timeline-item animate-on-scroll" data-date="2026"><div class="timeline-dot"><div class="dot-inner"></div></div><div class="timeline-content"><div class="timeline-date" data-en="05/2026 – 11/2026" data-vi="05/2026 – 11/2026" data-zh="05/2026 – 11/2026">05/2026 – 11/2026</div><h3 data-en="Fullstack AI Engineer" data-vi="Fullstack AI Engineer" data-zh="全栈 AI 工程师">Fullstack AI Engineer</h3><h4 data-en="BCP · Business Connecting Product" data-vi="BCP · Business Connecting Product" data-zh="BCP · Business Connecting Product">BCP · Business Connecting Product</h4><p data-en="Designed multi-agent workflows for demand normalization and B2B partner discovery. Compared retrieval and LLM approaches across 15 evaluation runs, tracking retrieval quality, latency, tokens, estimated cost and fallback behavior." data-vi="Thiết kế luồng đa tác tử chuẩn hóa nhu cầu và tìm kiếm đối tác B2B. Đối chiếu các phương án tìm kiếm và LLM qua 15 lượt đánh giá; theo dõi chất lượng truy xuất, độ trễ, token, chi phí ước tính và phương án dự phòng." data-zh="设计需求标准化和 B2B 合作伙伴发现的多智能体工作流。通过 15 次评估比较检索与 LLM 方案，跟踪检索质量、延迟、token、估算成本及回退行为。">Thiết kế luồng đa tác tử chuẩn hóa nhu cầu và tìm kiếm đối tác B2B. Đối chiếu các phương án tìm kiếm và LLM qua 15 lượt đánh giá; theo dõi chất lượng truy xuất, độ trễ, token, chi phí ước tính và phương án dự phòng.</p><div class="timeline-skills"><span>Python</span><span>BM25</span><span>LLM evaluation</span></div></div></div><div class="timeline-item animate-on-scroll" data-date="2026"><div class="timeline-dot"><div class="dot-inner"></div></div><div class="timeline-content"><div class="timeline-date" data-en="10/2025 – 04/2026" data-vi="10/2025 – 04/2026" data-zh="10/2025 – 04/2026">10/2025 – 04/2026</div><h3 data-en="AI Engineer Intern" data-vi="Thực tập sinh AI Engineer" data-zh="AI 工程实习生">Thực tập sinh AI Engineer</h3><h4 data-en="L&amp;A Tech" data-vi="L&amp;A Tech" data-zh="L&amp;A Tech">L&amp;A Tech</h4><p data-en="Developed a Vietnamese travel-planning chatbot with FastAPI, LangGraph and Ollama. Integrated Qdrant, Mapbox and OpenWeather, with multi-turn state, constraint-aware replanning and Pydantic validation." data-vi="Phát triển chatbot lập lịch du lịch tiếng Việt bằng FastAPI, LangGraph và Ollama. Tích hợp Qdrant, Mapbox, OpenWeather; xử lý hội thoại nhiều lượt, điều chỉnh lịch theo ràng buộc và kiểm tra dữ liệu bằng Pydantic." data-zh="使用 FastAPI、LangGraph 和 Ollama 开发越南语旅行规划聊天机器人，集成 Qdrant、Mapbox 和 OpenWeather，支持多轮状态、约束规划与 Pydantic 验证。">Phát triển chatbot lập lịch du lịch tiếng Việt bằng FastAPI, LangGraph và Ollama. Tích hợp Qdrant, Mapbox, OpenWeather; xử lý hội thoại nhiều lượt, điều chỉnh lịch theo ràng buộc và kiểm tra dữ liệu bằng Pydantic.</p><div class="timeline-skills"><span>FastAPI</span><span>LangGraph</span><span>Qdrant</span></div></div></div><div class="timeline-item animate-on-scroll" data-date="2026"><div class="timeline-dot"><div class="dot-inner"></div></div><div class="timeline-content"><div class="timeline-date" data-en="02/2026 – 04/2026" data-vi="02/2026 – 04/2026" data-zh="02/2026 – 04/2026">02/2026 – 04/2026</div><h3 data-en="Teaching Assistant" data-vi="Trợ giảng các môn chuyên ngành" data-zh="专业课程助教">Trợ giảng các môn chuyên ngành</h3><h4 data-en="UTH" data-vi="UTH" data-zh="UTH">UTH</h4><p data-en="Supported lecturers in classroom sessions for students covering Python, machine learning and deep learning." data-vi="Hỗ trợ giảng viên tại lớp cho sinh viên trong các nội dung Python, học máy và học sâu." data-zh="协助教师开展面向学生的 Python、机器学习和深度学习课堂教学。">Hỗ trợ giảng viên tại lớp cho sinh viên trong các nội dung Python, học máy và học sâu.</p><div class="timeline-skills"><span>Python</span><span>Machine Learning</span><span>Deep Learning</span></div></div></div>
+<div class="timeline-item animate-on-scroll" data-date="2024">
+<div class="timeline-dot"><div class="dot-inner"></div></div>
+<div class="timeline-content">
+<div class="timeline-date" data-en="03/2024 · Web &amp; communication projects" data-vi="03/2024 · Dự án web &amp; truyền thông" data-zh="03/2024 · 网页与传播项目">03/2024 · Dự án web &amp; truyền thông</div>
+<h3 data-en="Web Developer &amp; Project Manager" data-vi="Lập trình viên Web &amp; Quản lý dự án" data-zh="网页开发者与项目管理">Lập trình viên Web &amp; Quản lý dự án</h3>
+<h4 data-en="Duong Lifestyle" data-vi="Duong Lifestyle" data-zh="Duong Lifestyle">Duong Lifestyle</h4>
+<p data-en="Design and develop websites, manage projects and communications. Responsible for UI/UX, project coordination, and digital marketing campaigns." data-vi="Thiết kế, phát triển website, quản lý dự án và truyền thông. Chịu trách nhiệm về giao diện, trải nghiệm người dùng và triển khai các chiến dịch marketing số." data-zh="负责网站设计与开发、项目协调及传播工作，重点聚焦界面体验、用户体验与数字营销活动执行。">Thiết kế, phát triển website, quản lý dự án và truyền thông. Chịu trách nhiệm về giao diện, trải nghiệm người dùng và triển khai các chiến dịch marketing số.</p>
+<div class="timeline-skills">
+<span data-en="Web Design" data-vi="Thiết kế Web" data-zh="网页设计">Thiết kế Web</span>
+<span data-en="Project Management" data-vi="Quản lý dự án" data-zh="项目管理">Quản lý dự án</span>
+<span data-en="Digital Marketing" data-vi="Marketing số" data-zh="数字营销">Marketing số</span>
+</div>
+</div>
+</div>
+<div class="timeline-item animate-on-scroll" data-date="2023">
+<div class="timeline-dot"><div class="dot-inner"></div></div>
+<div class="timeline-content">
+<div class="timeline-date" data-en="11/2023 · Web &amp; communication projects" data-vi="11/2023 · Dự án web &amp; truyền thông" data-zh="11/2023 · 网页与传播项目">11/2023 · Dự án web &amp; truyền thông</div>
+<h3 data-en="Web Developer &amp; Marketing Specialist" data-vi="Lập trình viên Web &amp; Chuyên viên Marketing" data-zh="网页开发者与市场传播专员">Lập trình viên Web &amp; Chuyên viên Marketing</h3>
+<h4 data-en="Yen Van" data-vi="Yên Văn" data-zh="Yên Văn">Yên Văn</h4>
+<p data-en="Developed web interfaces, created communication content, and supported educational project management. Ensured digital product quality and effective outreach." data-vi="Phát triển giao diện web, xây dựng nội dung truyền thông, hỗ trợ quản lý dự án giáo dục. Đảm bảo chất lượng sản phẩm số và hiệu quả truyền thông." data-zh="负责网页界面开发、传播内容制作与教育项目支持，兼顾数字产品质量与传播效果。">Phát triển giao diện web, xây dựng nội dung truyền thông, hỗ trợ quản lý dự án giáo dục. Đảm bảo chất lượng sản phẩm số và hiệu quả truyền thông.</p>
+<div class="timeline-skills">
+<span data-en="Web Development" data-vi="Phát triển Web" data-zh="网页开发">Phát triển Web</span>
+<span data-en="Communication" data-vi="Truyền thông" data-zh="传播沟通">Truyền thông</span>
+<span data-en="EdTech" data-vi="Công nghệ giáo dục" data-zh="教育科技">Công nghệ giáo dục</span>
+</div>
+</div>
+</div>
+<div class="timeline-item animate-on-scroll" data-date="2023">
+<div class="timeline-dot"><div class="dot-inner"></div></div>
+<div class="timeline-content">
+<div class="timeline-date" data-en="06/2023 - 12/2023" data-vi="06/2023 - 12/2023" data-zh="06/2023 - 12/2023">06/2023 - 12/2023</div>
+<h3 data-en="Assistant Manager &amp; Receptionist" data-vi="Trợ lý giám đốc &amp; Lễ tân" data-zh="经理助理与前台接待">Trợ lý giám đốc &amp; Lễ tân</h3>
+<h4 data-en="Versailess Spa" data-vi="Versailess Spa" data-zh="Versailess Spa">Versailess Spa</h4>
+<p data-en="Assisted executive management, provided customer consultation, prepared documents and contracts, and managed spa operations." data-vi="Hỗ trợ giám đốc điều hành, tư vấn khách hàng, biên soạn tài liệu và hợp đồng, quản lý hoạt động vận hành spa." data-zh="协助管理层运营、客户咨询、文件与合同准备，以及 SPA 日常运营管理。">Hỗ trợ giám đốc điều hành, tư vấn khách hàng, biên soạn tài liệu và hợp đồng, quản lý hoạt động vận hành spa.</p>
+<div class="timeline-skills">
+<span data-en="Customer Service" data-vi="Chăm sóc khách hàng" data-zh="客户服务">Chăm sóc khách hàng</span>
+<span data-en="Management" data-vi="Quản lý" data-zh="运营管理">Quản lý</span>
+<span data-en="Documentation" data-vi="Tài liệu" data-zh="文档处理">Tài liệu</span>
+</div>
+</div>
+</div>
+</div>
+</section> <section class="section-container" id="achievements">
+<div class="section-header">
+<span class="section-number">03</span>
+<h2 class="section-title animate-on-scroll" data-en="Achievements &amp; Recognition" data-vi="Thành tích &amp; Ghi nhận" data-zh="成果与荣誉">Thành tích &amp; Ghi nhận</h2>
+<div class="section-line"></div>
+</div><div class="archive-callout"><p data-en="Every achievement has a story — and evidence." data-vi="Thành tích có câu chuyện, và có minh chứng." data-zh="每项成果都有故事，也有实证。">Thành tích có câu chuyện, và có minh chứng.</p><a class="btn-primary" data-en="Explore certificates &amp; papers" data-vi="Xem thư viện chứng nhận &amp; paper" data-zh="查看证书与论文" href="achievements.html">Xem thư viện chứng nhận &amp; paper</a></div>
+<div class="achievements-container">
+<!-- Achievements Timeline Section -->
+<div class="achievements-timeline animate-on-scroll">
+<div class="timeline-line"></div><div class="achievement-item animate-on-scroll"><div class="timeline-dot"><div class="dot-inner"></div></div><div class="achievement-content"><div class="achievement-badge" data-en="Best Paper Award" data-vi="Best Paper Award" data-zh="Best Paper Award">Best Paper Award</div><div class="achievement-date" data-en="16–17/10/2026" data-vi="16–17/10/2026" data-zh="16–17/10/2026">16–17/10/2026</div><h3 data-en="Best Paper Award — EG-cDAGAN" data-vi="Best Paper Award — EG-cDAGAN" data-zh="最佳论文奖 — EG-cDAGAN">Best Paper Award — EG-cDAGAN</h3><h4 data-en="STAIS 2026" data-vi="STAIS 2026" data-zh="STAIS 2026">STAIS 2026</h4><p data-en="First author of research on epsilon-greedy difficulty-aware curriculum learning for conditional image generation. Award and oral-presentation certificates available." data-vi="Tác giả đầu nghiên cứu học theo chương trình điều chỉnh độ khó epsilon-greedy cho mô hình sinh ảnh có điều kiện. Có chứng nhận giải thưởng và chứng nhận báo cáo tại hội thảo." data-zh="研究基于 epsilon-greedy 难度感知课程学习的条件图像生成，任第一作者。附获奖与口头报告证书。">Tác giả đầu nghiên cứu học theo chương trình điều chỉnh độ khó epsilon-greedy cho mô hình sinh ảnh có điều kiện. Có chứng nhận giải thưởng và chứng nhận báo cáo tại hội thảo.</p></div></div><div class="achievement-item animate-on-scroll"><div class="timeline-dot"><div class="dot-inner"></div></div><div class="achievement-content"><div class="achievement-badge" data-en="Oral presentation" data-vi="Oral presentation" data-zh="Oral presentation">Oral presentation</div><div class="achievement-date" data-en="16–17/10/2026" data-vi="16–17/10/2026" data-zh="16–17/10/2026">16–17/10/2026</div><h3 data-en="Vietnamese legal RAG research" data-vi="Nghiên cứu RAG pháp luật tiếng Việt" data-zh="越南语法律 RAG 研究">Nghiên cứu RAG pháp luật tiếng Việt</h3><h4 data-en="STAIS 2026" data-vi="STAIS 2026" data-zh="STAIS 2026">STAIS 2026</h4><p data-en="Co-author of “Structure-Aware Retrieval-Augmented Generation with a Knowledge Graph-Based Critic for Vietnamese Legal Question Answering”; certified oral presentation." data-vi="Đồng tác giả “Structure-Aware Retrieval-Augmented Generation with a Knowledge Graph-Based Critic for Vietnamese Legal Question Answering”; có chứng nhận báo cáo tại hội thảo." data-zh="论文“Structure-Aware Retrieval-Augmented Generation with a Knowledge Graph-Based Critic for Vietnamese Legal Question Answering”共同作者，附口头报告证书。">Đồng tác giả “Structure-Aware Retrieval-Augmented Generation with a Knowledge Graph-Based Critic for Vietnamese Legal Question Answering”; có chứng nhận báo cáo tại hội thảo.</p></div></div><div class="achievement-item animate-on-scroll"><div class="timeline-dot"><div class="dot-inner"></div></div><div class="achievement-content"><div class="achievement-badge" data-en="Trainer" data-vi="Trainer" data-zh="Trainer">Trainer</div><div class="achievement-date" data-en="Gemini Academy for Student" data-vi="Gemini Academy for Student" data-zh="Gemini Academy for Student">Gemini Academy for Student</div><h3 data-en="Trainer — Gemini Academy for Student" data-vi="Trainer — Gemini Academy for Student" data-zh="培训讲师 — Gemini Academy for Student">Trainer — Gemini Academy for Student</h3><h4 data-en="Google" data-vi="Google" data-zh="Google">Google</h4><p data-en="Recognized for excellent completion of the Trainer role in the Gemini Academy for Student program." data-vi="Được chứng nhận hoàn thành xuất sắc vai trò Trainer trong khuôn khổ chương trình Gemini Academy for Student." data-zh="获 Gemini Academy for Student 项目证书，表彰出色完成 Trainer 职责。">Được chứng nhận hoàn thành xuất sắc vai trò Trainer trong khuôn khổ chương trình Gemini Academy for Student.</p></div></div><div class="achievement-item animate-on-scroll"><div class="timeline-dot"><div class="dot-inner"></div></div><div class="achievement-content"><div class="achievement-badge" data-en="Research" data-vi="Research" data-zh="Research">Research</div><div class="achievement-date" data-en="2025" data-vi="2025" data-zh="2025">2025</div><h3 data-en="SPD-GAN — generative modeling research" data-vi="SPD-GAN — nghiên cứu mô hình sinh ảnh" data-zh="SPD-GAN — 生成模型研究">SPD-GAN — nghiên cứu mô hình sinh ảnh</h3><h4 data-en="STAIS 2025" data-vi="STAIS 2025" data-zh="STAIS 2025">STAIS 2025</h4><p data-en="First author of “A Study on Difficulty Adjustment Solutions for the Discriminator in Generative Models (SPD-GAN)”, STAIS 2025 proceedings, pp. 90–99." data-vi="Tác giả đầu “A Study on Difficulty Adjustment Solutions for the Discriminator in Generative Models (SPD-GAN)”, kỷ yếu STAIS 2025, trang 90–99." data-zh="论文“A Study on Difficulty Adjustment Solutions for the Discriminator in Generative Models (SPD-GAN)”第一作者，收录于 STAIS 2025 论文集，第 90–99 页。">Tác giả đầu “A Study on Difficulty Adjustment Solutions for the Discriminator in Generative Models (SPD-GAN)”, kỷ yếu STAIS 2025, trang 90–99.</p></div></div>
+<div class="achievement-item animate-on-scroll">
+<div class="timeline-dot">
+<div class="dot-inner"></div>
+</div>
+<div class="achievement-content">
+<div class="achievement-badge">2025</div>
+<div class="achievement-date">2025</div>
+<h3 data-en="National Scientific Report" data-vi="Báo cáo Khoa học Quốc gia" data-zh="国家级科研报告">Báo cáo Khoa học Quốc gia</h3>
+<h4 data-en="CTST 2025" data-vi="CTST 2025" data-zh="CTST 2025">CTST 2025</h4>
+<p data-en="Presented and published at the 6th National Conference on Science and Technology in Transport (ISBN: 978-604-76-3107-0)." data-vi="Báo cáo và xuất bản tại Hội thảo Khoa học Quốc gia lần VI về Khoa học và Công nghệ Giao thông Vận tải (ISBN: 978-604-76-3107-0)." data-zh="成果发表于第六届国家交通运输科学与技术会议论文集中（ISBN: 978-604-76-3107-0）。">Báo cáo và xuất bản tại Hội thảo Khoa học Quốc gia lần VI về Khoa học và Công nghệ Giao thông Vận tải (ISBN: 978-604-76-3107-0).</p>
+</div>
+</div>
+<div class="achievement-item animate-on-scroll">
+<div class="timeline-dot">
+<div class="dot-inner"></div>
+</div>
+<div class="achievement-content">
+<div class="achievement-badge">Excellence</div>
+<div class="achievement-date">2025</div>
+<h3 data-en="Outstanding Spring Volunteer Campaign" data-vi="Xuất sắc Chiến dịch Xuân Tình nguyện" data-zh="春季志愿服务优秀表彰">Xuất sắc Chiến dịch Xuân Tình nguyện</h3>
+<h4 data-en="Youth Union" data-vi="Đoàn trường" data-zh="校青年团">Đoàn trường</h4>
+<p data-en="Certificate of excellence for outstanding performance in the 2025 Spring Volunteer Campaign." data-vi="Giấy khen hoàn thành xuất sắc nhiệm vụ trong Chiến dịch Xuân tình nguyện 2025." data-zh="因在 2025 年春季志愿服务活动中表现突出而获得表彰。">Giấy khen hoàn thành xuất sắc nhiệm vụ trong Chiến dịch Xuân tình nguyện 2025.</p>
+</div>
+</div>
+<div class="achievement-item animate-on-scroll">
+<div class="timeline-dot">
+<div class="dot-inner"></div>
+</div>
+<div class="achievement-content">
+<div class="achievement-badge">Google</div>
+<div class="achievement-date">2026</div>
+<h3 data-en="Google Student Ambassador" data-vi="Google Student Ambassador" data-zh="Google 学生大使">Google Student Ambassador</h3>
+<h4 data-en="Student Technology Community" data-vi="Cộng đồng sinh viên công nghệ" data-zh="学生科技社区">Cộng đồng sinh viên công nghệ</h4>
+<p data-en="Worked with student communities through digital-skills sharing, technology learning activities, and initiatives designed to create positive impact." data-vi="Đồng hành cùng cộng đồng sinh viên trong các hoạt động chia sẻ kỹ năng số, học công nghệ và kết nối những sáng kiến tạo ra tác động tích cực." data-zh="参与学生科技社群建设，推动数字技能分享、技术学习活动，以及具有积极影响力的校园项目。">Đồng hành cùng cộng đồng sinh viên trong các hoạt động chia sẻ kỹ năng số, học công nghệ và kết nối những sáng kiến tạo ra tác động tích cực.</p>
+</div>
+</div>
+<div class="achievement-item animate-on-scroll">
+<div class="timeline-dot">
+<div class="dot-inner"></div>
+</div>
+<div class="achievement-content">
+<div class="achievement-badge">Bronze Medal</div>
+<div class="achievement-date">2024</div>
+<h3 data-en="Bronze Medal - Design and Application" data-vi="Huy chương Đồng - Thiết kế Chế tạo Ứng dụng" data-zh="应用设计与制作铜奖">Huy chương Đồng - Thiết kế Chế tạo Ứng dụng</h3>
+<h4 data-en="HCMC Youth Union Executive Committee" data-vi="Ban Chấp hành Thành Đoàn TP.HCM" data-zh="胡志明市青年团执委会">Ban Chấp hành Thành Đoàn TP.HCM</h4>
+<p data-en="Bronze medal at the 12th competition in 2024 for the project 'Nutrition - New Solutions for a New Life' at HCM University of Technology and Education." data-vi="Cuộc thi lần thứ 12 năm 2024 với đề tài 'Nutrition - Giải pháp mới cho cuộc sống' tại Đại học Sư phạm Kỹ thuật TP.HCM." data-zh="在 2024 年第 12 届比赛中，凭借 'Nutrition - Giải pháp mới cho cuộc sống' 项目获得铜奖。">Cuộc thi lần thứ 12 năm 2024 với đề tài 'Nutrition - Giải pháp mới cho cuộc sống' tại Đại học Sư phạm Kỹ thuật TP.HCM.</p>
+</div>
+</div>
+<div class="achievement-item animate-on-scroll">
+<div class="timeline-dot">
+<div class="dot-inner"></div>
+</div>
+<div class="achievement-content">
+<div class="achievement-badge">International</div>
+<div class="achievement-date">2024</div>
+<h3 data-en="International Student Science Forum" data-vi="Diễn đàn Khoa học Sinh viên Quốc tế" data-zh="国际学生科学论坛">Diễn đàn Khoa học Sinh viên Quốc tế</h3>
+<h4 data-en="HCMC Student Association - 8th Edition" data-vi="Hội sinh viên TP.HCM - Lần 8" data-zh="胡志明市学生会第 8 届">Hội sinh viên TP.HCM - Lần 8</h4>
+<p data-en="Joined the forum on how youth can lead volunteerism and community impact from the local level to the global stage." data-vi="Tham gia diễn đàn với chủ đề thanh niên phát huy vai trò xung kích, tình nguyện vì cộng đồng từ địa phương đến toàn cầu." data-zh="参与国际学生科学论坛，主题聚焦青年如何从地方到全球层面推动志愿行动与社区影响力。">Tham gia diễn đàn với chủ đề thanh niên phát huy vai trò xung kích, tình nguyện vì cộng đồng từ địa phương đến toàn cầu.</p>
+</div>
+</div>
+<div class="achievement-item animate-on-scroll">
+<div class="timeline-dot">
+<div class="dot-inner"></div>
+</div>
+<div class="achievement-content">
+<div class="achievement-badge">Observer</div>
+<div class="achievement-date">2024</div>
+<h3 data-en="LCOY Vietnam Observer" data-vi="Quan sát viên LCOY Việt Nam" data-zh="越南 LCOY 观察员">Quan sát viên LCOY Việt Nam</h3>
+<h4 data-en="YNet Vietnam - Ministry of Natural Resources &amp; Environment - UNDP" data-vi="YNet Việt Nam - Bộ TN&amp;MT - UNDP" data-zh="YNet Vietnam - 自然资源与环境部 - UNDP">YNet Việt Nam - Bộ TN&amp;MT - UNDP</h4>
+<p data-en="Observer delegate at the 2024 Local Conference of Youth (LCOY Vietnam)." data-vi="Đại biểu quan sát viên tại Local Conference of Youth - LCOY Viet Nam 2024." data-zh="作为观察员代表参加 2024 年越南青年地方气候大会（LCOY Vietnam）。">Đại biểu quan sát viên tại Local Conference of Youth - LCOY Viet Nam 2024.</p>
+</div>
+</div>
+<div class="achievement-item animate-on-scroll">
+<div class="timeline-dot">
+<div class="dot-inner"></div>
+</div>
+<div class="achievement-content">
+<div class="achievement-badge">3 Publications</div>
+<div class="achievement-date">2024</div>
+<h3 data-en="3 AI Development Conference Papers" data-vi="3 Bài Hội thảo - Phát triển AI" data-zh="3 篇 AI 发展会议论文">3 Bài Hội thảo - Phát triển AI</h3>
+<h4 data-en="HCMC Department of Information &amp; Communications" data-vi="Sở TT&amp;TT TP.HCM" data-zh="胡志明市信息与通信厅">Sở TT&amp;TT TP.HCM</h4>
+<p data-en="Published 3 conference papers in the proceedings 'AI Human Resource Development 2024'." data-vi="3 bài hội thảo được in trong kỷ yếu 'Phát triển Nguồn Nhân lực Trí tuệ Nhân tạo (AI) năm 2024'." data-zh="3 篇会议论文收录于《2024 年人工智能人力资源发展》论文集。">3 bài hội thảo được in trong kỷ yếu 'Phát triển Nguồn Nhân lực Trí tuệ Nhân tạo (AI) năm 2024'.</p>
+</div>
+</div>
+<div class="achievement-item animate-on-scroll">
+<div class="timeline-dot">
+<div class="dot-inner"></div>
+</div>
+<div class="achievement-content">
+<div class="achievement-badge">Volunteer</div>
+<div class="achievement-date">2024</div>
+<h3 data-en="Young Science Volunteer" data-vi="Trí thức Khoa học Trẻ Tình nguyện" data-zh="青年科技志愿者">Trí thức Khoa học Trẻ Tình nguyện</h3>
+<h4 data-en="People's Committee of Thap Muoi District, Dong Thap" data-vi="UBND huyện Tháp Mười, Đồng Tháp" data-zh="同塔省塔梅县人民委员会">UBND huyện Tháp Mười, Đồng Tháp</h4>
+<p data-en="Recognized for outstanding contribution to the 2024 Young Science Volunteer Program." data-vi="Được ghi nhận thành tích xuất sắc trong chương trình 'Trí thức khoa học trẻ tình nguyện năm 2024'." data-zh="因在 2024 年青年科技志愿者项目中的突出贡献而获表彰。">Được ghi nhận thành tích xuất sắc trong chương trình 'Trí thức khoa học trẻ tình nguyện năm 2024'.</p>
+</div>
+</div>
+<div class="achievement-item animate-on-scroll">
+<div class="timeline-dot">
+<div class="dot-inner"></div>
+</div>
+<div class="achievement-content">
+<div class="achievement-badge">2nd Prize</div>
+<div class="achievement-date">2024</div>
+<h3 data-en="2nd Prize - Food Safety" data-vi="Giải nhì - An toàn Thực phẩm" data-zh="食品安全二等奖">Giải nhì - An toàn Thực phẩm</h3>
+<h4 data-en="HUIT - 8th Conference" data-vi="HUIT - Hội thảo lần 8" data-zh="HUIT 第 8 届研讨会">HUIT - Hội thảo lần 8</h4>
+<p data-en="Second-prize work on applying AI to nutrition management for food safety in Vietnam's smart cities." data-vi="Đề tài ứng dụng AI trong quản lý dinh dưỡng nhằm bảo đảm an toàn thực phẩm cho đô thị thông minh Việt Nam." data-zh="以 AI 应用于营养管理、服务越南智慧城市食品安全为主题的研究获得二等奖。">Đề tài ứng dụng AI trong quản lý dinh dưỡng nhằm bảo đảm an toàn thực phẩm cho đô thị thông minh Việt Nam.</p>
+</div>
+</div>
+<div class="achievement-item animate-on-scroll">
+<div class="timeline-dot">
+<div class="dot-inner"></div>
+</div>
+<div class="achievement-content">
+<div class="achievement-badge">3rd Prize</div>
+<div class="achievement-date">2024</div>
+<h3 data-en="3rd Prize - Blockchain Food Traceability" data-vi="Giải ba - Blockchain Truy xuất Thực phẩm" data-zh="食品溯源区块链三等奖">Giải ba - Blockchain Truy xuất Thực phẩm</h3>
+<h4 data-en="Food Safety - 8th Edition" data-vi="An toàn thực phẩm - Lần 8" data-zh="食品安全第 8 届">An toàn thực phẩm - Lần 8</h4>
+<p data-en="Third-prize work on applying blockchain to food traceability." data-vi="Đề tài ứng dụng Blockchain trong truy xuất nguồn gốc thực phẩm." data-zh="以区块链应用于食品来源追溯为主题的研究获得三等奖。">Đề tài ứng dụng Blockchain trong truy xuất nguồn gốc thực phẩm.</p>
+</div>
+</div>
+<div class="achievement-item animate-on-scroll">
+<div class="timeline-dot">
+<div class="dot-inner"></div>
+</div>
+<div class="achievement-content">
+<div class="achievement-badge">3rd Prize</div>
+<div class="achievement-date">2024</div>
+<h3 data-en="3rd Prize - AI in Medical Diagnosis" data-vi="Giải ba - AI trong Chẩn đoán Y tế" data-zh="AI 医疗诊断三等奖">Giải ba - AI trong Chẩn đoán Y tế</h3>
+<h4 data-en="Thong Nhat Hospital" data-vi="Bệnh viện Thống Nhất" data-zh="统一医院">Bệnh viện Thống Nhất</h4>
+<p data-en="Nutritions, an AI-powered meal recommendation platform, was published in Young Science Journal (ISSN: 2354-1105)." data-vi="Nền tảng Nutritions ứng dụng AI gợi ý bữa ăn theo thể trạng, được xuất bản trên Tạp chí Khoa học Trẻ (ISSN: 2354-1105)." data-zh="AI 膳食建议平台 Nutritions 相关成果发表于《青年科学期刊》（ISSN: 2354-1105）。">Nền tảng Nutritions ứng dụng AI gợi ý bữa ăn theo thể trạng, được xuất bản trên Tạp chí Khoa học Trẻ (ISSN: 2354-1105).</p>
+</div>
+</div>
+<div class="achievement-item animate-on-scroll">
+<div class="timeline-dot">
+<div class="dot-inner"></div>
+</div>
+<div class="achievement-content">
+<div class="achievement-badge">Excellence</div>
+<div class="achievement-date">2023-2024</div>
+<h3 data-en="UTH Five-Good Student" data-vi="Sinh viên 5 tốt UTH" data-zh="UTH 五好学生">Sinh viên 5 tốt UTH</h3>
+<h4 data-en="Ho Chi Minh City University of Transport" data-vi="Trường Đại học Giao thông Vận tải TP.HCM" data-zh="胡志明市交通运输大学">Trường Đại học Giao thông Vận tải TP.HCM</h4>
+<p data-en="Awarded the 'UTH Five-Good Student' title for the 2023-2024 academic year, recognizing well-rounded achievement in academics, skills, and community engagement." data-vi="Đạt danh hiệu 'Sinh viên 5 tốt UTH' năm học 2023-2024, ghi nhận sự phát triển toàn diện trong học tập, kỹ năng và hoạt động cộng đồng." data-zh="获得 2023-2024 学年 'UTH 五好学生' 称号，体现学术、技能与社区参与的全面发展。">Đạt danh hiệu 'Sinh viên 5 tốt UTH' năm học 2023-2024, ghi nhận sự phát triển toàn diện trong học tập, kỹ năng và hoạt động cộng đồng.</p>
+</div>
+</div>
+</div>
+<!-- Professional Certifications -->
+<div class="certifications-section animate-on-scroll">
+<h3 class="subsection-title" data-en="Highlights &amp; Communities" data-vi="Điểm nhấn &amp; Cộng đồng" data-zh="亮点与社群">Điểm nhấn &amp; Cộng đồng</h3>
+<div class="certifications-grid">
+<div class="cert-card animate-on-scroll">
+<div class="cert-icon">
+<ion-icon name="accessibility-outline"></ion-icon>
+</div>
+<div class="cert-content">
+<h4 data-en="Certified Yoga Instructor (RYT-200)" data-vi="Huấn luyện viên Yoga (RYT-200)" data-zh="认证瑜伽教练（RYT-200）">Huấn luyện viên Yoga (RYT-200)</h4>
+<p data-en="Yoga Alliance" data-vi="Yoga Alliance" data-zh="Yoga Alliance">Yoga Alliance</p>
+<span class="cert-status" data-en="Active" data-vi="Hiệu lực" data-zh="有效">Hiệu lực</span>
+</div>
+</div>
+<div class="cert-card animate-on-scroll">
+<div class="cert-icon">
+<ion-icon name="document-text-outline"></ion-icon>
+</div>
+<div class="cert-content">
+<h4 data-en="4 selected research works · 2025–2026" data-vi="4 nghiên cứu tiêu biểu · 2025–2026" data-zh="4 项精选研究 · 2025–2026">4 nghiên cứu tiêu biểu · 2025–2026</h4>
+<p data-en="Conference proceedings and research forums" data-vi="Hội thảo và kỷ yếu chuyên ngành" data-zh="会议论文集与研究论坛">Hội thảo và kỷ yếu chuyên ngành</p>
+<span class="cert-status" data-en="Papers &amp; certificates" data-vi="Xem paper &amp; chứng nhận" data-zh="论文与证书">Xem paper &amp; chứng nhận</span>
+</div>
+</div>
+<div class="cert-card animate-on-scroll">
+<div class="cert-icon">
+<ion-icon name="people-outline"></ion-icon>
+</div>
+<div class="cert-content">
+<h4 data-en="1K+ TikTok Followers" data-vi="1K+ người theo dõi TikTok" data-zh="TikTok 1K+ 关注者">1K+ người theo dõi TikTok</h4>
+<p data-en="Digital Content Impact" data-vi="Ảnh hưởng nội dung số" data-zh="数字内容影响力">Ảnh hưởng nội dung số</p>
+<span class="cert-status" data-en="Growing" data-vi="Đang phát triển" data-zh="持续增长">Đang phát triển</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Nonprofit & Research Projects Section (Achievements) -->
+<div class="nonprofit-section animate-on-scroll">
+<h3 class="subsection-title" data-en="Nonprofit &amp; Research Projects" data-vi="Dự án Phi lợi nhuận &amp; Nghiên cứu" data-zh="公益与研究项目">Dự án Phi lợi nhuận &amp; Nghiên cứu</h3>
+<div class="nonprofit-grid">
+<div class="nonprofit-card animate-on-scroll gsa-card">
+<a href="img/GSA.png" rel="noopener noreferrer" style="text-decoration:none;color:inherit;display:block;" target="_blank">
+<div class="nonprofit-banner">
+<img alt="Google Student Ambassador banner" loading="lazy" src="img/GSA.png"/>
+</div>
+<div class="nonprofit-content">
+<h4 data-en="Google Student Ambassador" data-vi="Google Student Ambassador" data-zh="Google 学生大使">Google Student Ambassador</h4>
+<p class="nonprofit-org" data-en="Google for Students • #TeamGoogle" data-vi="Google for Students • #TeamGoogle" data-zh="Google for Students • #TeamGoogle">Google for Students • #TeamGoogle</p>
+<p data-en="Contributed to the student ambassador community by promoting technology learning, sharing digital skills, and connecting students with practical, impact-driven activities." data-vi="Tham gia cộng đồng đại sứ sinh viên, lan tỏa tinh thần học công nghệ, chia sẻ kỹ năng số và kết nối sinh viên với những hoạt động mang tính ứng dụng và tạo ra tác động tích cực." data-zh="参与学生大使社群建设，推动技术学习、数字技能分享，并连接学生与兼具实践价值和积极影响力的活动。">Tham gia cộng đồng đại sứ sinh viên, lan tỏa tinh thần học công nghệ, chia sẻ kỹ năng số và kết nối sinh viên với những hoạt động mang tính ứng dụng và tạo ra tác động tích cực.</p>
+</div>
+</a>
+</div>
+<div class="nonprofit-card animate-on-scroll">
+<a class="nonprofit-link" href="https://tuhoc50.com/" rel="noopener noreferrer" target="_blank">
+<div class="nonprofit-logo-wrap">
+<img alt="Tự học 5.0" class="nonprofit-logo" loading="lazy" src="img/tuhoc50.png"/>
+</div>
+<div class="nonprofit-content">
+<h4 data-en="Self-learning 5.0 Project" data-vi="Dự án Tự học 5.0" data-zh="自主学习 5.0 项目">Dự án Tự học 5.0</h4>
+<p class="nonprofit-org" data-en="Ms. Trieu Nguyen Huyen Trang - Diplomatic Academy of Vietnam (DAV)" data-vi="Th.S Triệu Nguyễn Huyền Trang - Học viện Ngoại giao (DAV)" data-zh="Triệu Nguyễn Huyền Trang 硕士 - 越南外交学院（DAV）">Th.S Triệu Nguyễn Huyền Trang - Học viện Ngoại giao (DAV)</p>
+<p data-en="Promoted proactive and effective self-learning habits for students." data-vi="Khuyến khích thói quen tự học chủ động, hiệu quả cho học sinh và sinh viên." data-zh="推动学生建立更主动、更高效的自主学习习惯。">Khuyến khích thói quen tự học chủ động, hiệu quả cho học sinh và sinh viên.</p>
+</div>
+</a>
+</div>
+<div class="nonprofit-card animate-on-scroll">
+<a class="nonprofit-link" href="https://vanhocyeulaitudau.com/" rel="noopener noreferrer" target="_blank">
+<div class="nonprofit-logo-wrap">
+<img alt="Văn học Yêu lại từ đầu" class="nonprofit-logo" loading="lazy" src="img/vhyltd.png"/>
+</div>
+<div class="nonprofit-content">
+<h4 data-en="Literature - Love Again" data-vi="Văn học - Yêu lại từ đầu" data-zh="文学，从重新热爱开始">Văn học - Yêu lại từ đầu</h4>
+<p class="nonprofit-org" data-en="Ms. Trieu Nguyen Huyen Trang - Diplomatic Academy of Vietnam (DAV)" data-vi="Th.S Triệu Nguyễn Huyền Trang - Học viện Ngoại giao (DAV)" data-zh="Triệu Nguyễn Huyền Trang 硕士 - 越南外交学院（DAV）">Th.S Triệu Nguyễn Huyền Trang - Học viện Ngoại giao (DAV)</p>
+<p data-en="Participated in a nonprofit project that inspired young people to reconnect with literature." data-vi="Tham gia dự án phi lợi nhuận lan tỏa tình yêu văn học cho giới trẻ." data-zh="参与公益项目，帮助年轻人重新发现文学的吸引力。">Tham gia dự án phi lợi nhuận lan tỏa tình yêu văn học cho giới trẻ.</p>
+</div>
+</a>
+</div>
+<div class="nonprofit-card animate-on-scroll">
+<a class="nonprofit-link" href="https://yenvan.edu.vn/" rel="noopener noreferrer" target="_blank">
+<div class="nonprofit-logo-wrap">
+<img alt="Yên Văn" class="nonprofit-logo" loading="lazy" src="img/logoyenvan.png"/>
+</div>
+<div class="nonprofit-content">
+<h4 data-en="Yen Van Project" data-vi="Dự án Yên Văn" data-zh="Yên Văn 项目">Dự án Yên Văn</h4>
+<p class="nonprofit-org" data-en="Ms. Trieu Nguyen Huyen Trang - Diplomatic Academy of Vietnam (DAV)" data-vi="Th.S Triệu Nguyễn Huyền Trang - Học viện Ngoại giao (DAV)" data-zh="Triệu Nguyễn Huyền Trang 硕士 - 越南外交学院（DAV）">Th.S Triệu Nguyễn Huyền Trang - Học viện Ngoại giao (DAV)</p>
+<p data-en="Built creative and effective literature-learning methods for students." data-vi="Xây dựng phương pháp học văn hiệu quả và sáng tạo cho học sinh, sinh viên." data-zh="为学生打造更有效、更有创意的文学学习方法。">Xây dựng phương pháp học văn hiệu quả và sáng tạo cho học sinh, sinh viên.</p>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section-container" id="skills">
+<div class="section-header">
+<span class="section-number">04</span>
+<h2 class="section-title animate-on-scroll" data-en="Technical Skills" data-vi="Kỹ năng chuyên môn" data-zh="专业技能">Kỹ năng chuyên môn</h2>
+<div class="section-line"></div>
+</div>
+<div class="skills-container">
+<div class="skills-grid"><div class="skill-category animate-on-scroll"><div class="category-header"><h3 data-en="LLM Agents &amp; RAG" data-vi="LLM Agents &amp; RAG" data-zh="LLM 智能体与 RAG">LLM Agents &amp; RAG</h3></div><ul class="evidence-skills"><li>LangGraph</li><li>LangChain</li><li>Ollama</li><li>Prompt engineering</li><li>Qdrant</li><li>BM25 + dense search</li><li>RRF</li><li>Neo4j</li></ul></div><div class="skill-category animate-on-scroll"><div class="category-header"><h3 data-en="Backend &amp; testing" data-vi="Backend &amp; kiểm thử" data-zh="后端与测试">Backend &amp; kiểm thử</h3></div><ul class="evidence-skills"><li>Python</li><li>FastAPI</li><li>Pydantic</li><li>REST APIs</li><li>MongoDB</li><li>Pytest</li><li>Docker</li><li>Git / Linux</li></ul></div><div class="skill-category animate-on-scroll"><div class="category-header"><h3 data-en="AI research" data-vi="Nghiên cứu AI" data-zh="AI 研究">Nghiên cứu AI</h3></div><ul class="evidence-skills"><li>Conditional GANs</li><li>Curriculum learning</li><li>PyTorch</li><li>Computer Vision</li><li>RAG evaluation</li><li>RAGAS</li></ul></div></div>
+<!-- Technology Icons Cloud -->
+<div class="tech-cloud animate-on-scroll">
+<div class="tech-item">
+<ion-icon name="logo-python"></ion-icon>
+<span>Python</span>
+</div>
+<div class="tech-item">
+<ion-icon name="logo-javascript"></ion-icon>
+<span>JavaScript</span>
+</div>
+<div class="tech-item">
+<ion-icon name="logo-react"></ion-icon>
+<span>React</span>
+</div>
+<div class="tech-item">
+<ion-icon name="logo-nodejs"></ion-icon>
+<span>Node.js</span>
+</div>
+<div class="tech-item">
+<ion-icon name="logo-github"></ion-icon>
+<span>Git</span>
+</div>
+<div class="tech-item">
+<ion-icon name="logo-docker"></ion-icon>
+<span>Docker</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Hobbies Section -->
+<section class="section-container dark-section" id="hobbies">
+<div class="section-header">
+<span class="section-number">05</span>
+<h2 class="section-title animate-on-scroll" data-en="Hobbies" data-vi="Sở thích" data-zh="兴趣与生活">Sở thích</h2>
+<div class="section-line"></div>
+</div>
+<div class="hobbies-container">
+<div class="hobbies-grid">
+<div class="hobby-card animate-on-scroll">
+<div class="hobby-icon">
+<ion-icon name="accessibility-outline"></ion-icon>
+</div>
+<div class="hobby-content">
+<h3 data-en="Yoga &amp; Wellness" data-vi="Yoga &amp; Sức khỏe" data-zh="瑜伽与健康">Yoga &amp; Sức khỏe</h3>
+<p data-en="Certified yoga instructor passionate about holistic health and mind-body balance. Organizing yoga classes and creating wellness content." data-vi="Huấn luyện viên yoga được chứng nhận, đam mê sức khỏe toàn diện và cân bằng thân - tâm - trí. Tổ chức các lớp yoga và sáng tạo nội dung về sức khỏe." data-zh="持证瑜伽教练，关注整体健康与身心平衡，也持续开展瑜伽课程与健康内容创作。">Huấn luyện viên yoga được chứng nhận, đam mê sức khỏe toàn diện và cân bằng thân - tâm - trí. Tổ chức các lớp yoga và sáng tạo nội dung về sức khỏe.</p>
+<div class="hobby-tags">
+<span data-en="RYT-200 Certified" data-vi="Chứng nhận RYT-200" data-zh="RYT-200 认证">Chứng nhận RYT-200</span>
+<span data-en="Wellness Coaching" data-vi="Huấn luyện sức khỏe" data-zh="健康指导">Huấn luyện sức khỏe</span>
+<span data-en="Mindfulness" data-vi="Chánh niệm" data-zh="正念">Chánh niệm</span>
+</div>
+</div>
+</div>
+<div class="hobby-card animate-on-scroll">
+<div class="hobby-icon">
+<ion-icon name="videocam-outline"></ion-icon>
+</div>
+<div class="hobby-content">
+<h3 data-en="Content Creation" data-vi="Sáng tạo nội dung" data-zh="内容创作">Sáng tạo nội dung</h3>
+<p data-en="Creating educational content on TikTok with over 1K followers, focusing on technology and digital wellness." data-vi="Sáng tạo nội dung giáo dục trên TikTok với hơn 1K người theo dõi, tập trung vào công nghệ và sức khỏe số." data-zh="在 TikTok 持续创作教育内容，围绕科技与数字健康，已吸引 1K+ 关注者。">Sáng tạo nội dung giáo dục trên TikTok với hơn 1K người theo dõi, tập trung vào công nghệ và sức khỏe số.</p>
+<div class="hobby-tags">
+<span data-en="Video Editing" data-vi="Dựng video" data-zh="视频剪辑">Dựng video</span>
+<span data-en="Social Media" data-vi="Mạng xã hội" data-zh="社交媒体">Mạng xã hội</span>
+<span data-en="Education" data-vi="Giáo dục" data-zh="教育">Giáo dục</span>
+</div>
+</div>
+</div>
+<div class="hobby-card animate-on-scroll">
+<div class="hobby-icon">
+<ion-icon name="library-outline"></ion-icon>
+</div>
+<div class="hobby-content">
+<h3 data-en="Research &amp; Self-learning" data-vi="Nghiên cứu &amp; Học tập" data-zh="研究与自学">Nghiên cứu &amp; Học tập</h3>
+<p data-en="Passionate about AI research, scientific conferences, and continuous learning." data-vi="Đam mê nghiên cứu công nghệ AI, tham gia hội thảo khoa học và liên tục cập nhật kiến thức mới." data-zh="热爱 AI 研究，积极参加学术活动，并持续保持自我学习。">Đam mê nghiên cứu công nghệ AI, tham gia hội thảo khoa học và liên tục cập nhật kiến thức mới.</p>
+<div class="hobby-tags">
+<span data-en="Research" data-vi="Nghiên cứu" data-zh="研究">Nghiên cứu</span>
+<span data-en="Self-learning" data-vi="Tự học" data-zh="自学">Tự học</span>
+<span data-en="Innovation" data-vi="Đổi mới sáng tạo" data-zh="创新">Đổi mới sáng tạo</span>
+</div>
+</div>
+</div>
+<div class="hobby-card animate-on-scroll">
+<div class="hobby-icon">
+<ion-icon name="people-outline"></ion-icon>
+</div>
+<div class="hobby-content">
+<h3 data-en="Community Service" data-vi="Hoạt động tình nguyện" data-zh="志愿服务">Hoạt động tình nguyện</h3>
+<p data-en="Participating in volunteer projects, especially in education and community development." data-vi="Tham gia các dự án tình nguyện, đặc biệt trong giáo dục và phát triển cộng đồng." data-zh="积极参与志愿项目，尤其关注教育与社区发展。">Tham gia các dự án tình nguyện, đặc biệt trong giáo dục và phát triển cộng đồng.</p>
+<div class="hobby-tags">
+<span data-en="Community Service" data-vi="Cộng đồng" data-zh="社区服务">Cộng đồng</span>
+<span data-en="Education" data-vi="Giáo dục" data-zh="教育">Giáo dục</span>
+<span data-en="Social Impact" data-vi="Tác động xã hội" data-zh="社会影响">Tác động xã hội</span>
+</div>
+</div>
+</div>
+<div class="hobby-card animate-on-scroll">
+<div class="hobby-icon">
+<ion-icon name="camera-outline"></ion-icon>
+</div>
+<div class="hobby-content">
+<h3 data-en="Photography &amp; Design" data-vi="Nhiếp ảnh &amp; Thiết kế" data-zh="摄影与设计">Nhiếp ảnh &amp; Thiết kế</h3>
+<p data-en="Passionate about photography and design, combining creativity and technology to create compelling visual work." data-vi="Yêu thích chụp ảnh và thiết kế, kết hợp sáng tạo với công nghệ để tạo ra sản phẩm thị giác ấn tượng." data-zh="热爱摄影与设计，擅长把创意与技术结合成更有表现力的视觉作品。">Yêu thích chụp ảnh và thiết kế, kết hợp sáng tạo với công nghệ để tạo ra sản phẩm thị giác ấn tượng.</p>
+<div class="hobby-tags">
+<span data-en="Visual Design" data-vi="Thiết kế thị giác" data-zh="视觉设计">Thiết kế thị giác</span>
+<span data-en="Creative Arts" data-vi="Nghệ thuật sáng tạo" data-zh="创意艺术">Nghệ thuật sáng tạo</span>
+<span data-en="Digital Media" data-vi="Truyền thông số" data-zh="数字媒体">Truyền thông số</span>
+</div>
+</div>
+</div>
+<div class="hobby-card animate-on-scroll">
+<div class="hobby-icon">
+<ion-icon name="book-outline"></ion-icon>
+</div>
+<div class="hobby-content">
+<h3 data-en="Reading &amp; Literature" data-vi="Đọc sách &amp; Văn học" data-zh="阅读与文学">Đọc sách &amp; Văn học</h3>
+<p data-en="Participating in the 'Literature - Love Again' project, inspiring a love of literature and stronger reading habits among young people." data-vi="Tham gia dự án 'Văn học - Yêu lại từ đầu', khơi gợi tình yêu văn học và xây dựng thói quen đọc sách cho thế hệ trẻ." data-zh="参与 '文学，从重新热爱开始' 项目，帮助年轻人重新建立对文学与阅读的兴趣。">Tham gia dự án 'Văn học - Yêu lại từ đầu', khơi gợi tình yêu văn học và xây dựng thói quen đọc sách cho thế hệ trẻ.</p>
+<div class="hobby-tags">
+<span data-en="Literature" data-vi="Văn học" data-zh="文学">Văn học</span>
+<span data-en="Reading" data-vi="Đọc sách" data-zh="阅读">Đọc sách</span>
+<span data-en="Cultural Projects" data-vi="Dự án văn hóa" data-zh="文化项目">Dự án văn hóa</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Languages Section -->
+<section class="section-container" id="languages">
+<div class="section-header">
+<span class="section-number">06</span>
+<h2 class="section-title animate-on-scroll" data-en="Languages" data-vi="Ngôn ngữ" data-zh="语言能力">Ngôn ngữ</h2>
+<div class="section-line"></div>
+</div>
+<div class="languages-container">
+<div class="languages-grid">
+<div class="language-card animate-on-scroll">
+<div class="language-flag">
+<img alt="Vietnamese Flag" height="30" loading="lazy" src="https://flagcdn.com/w80/vn.png" width="40"/>
+</div>
+<div class="language-info">
+<h3 data-en="Vietnamese" data-vi="Tiếng Việt" data-zh="越南语">Tiếng Việt</h3>
+<p data-en="Native speaker" data-vi="Ngôn ngữ mẹ đẻ" data-zh="母语">Ngôn ngữ mẹ đẻ</p>
+<div class="language-level">
+<div class="level-bars">
+<div class="level-bar active"></div>
+<div class="level-bar active"></div>
+<div class="level-bar active"></div>
+<div class="level-bar active"></div>
+<div class="level-bar active"></div>
+</div>
+<span class="level-text" data-en="Native" data-vi="Bản ngữ" data-zh="母语">Bản ngữ</span>
+</div>
+</div>
+</div>
+<div class="language-card animate-on-scroll">
+<div class="language-flag">
+<img alt="English Flag" height="30" loading="lazy" src="https://flagcdn.com/w80/us.png" width="40"/>
+</div>
+<div class="language-info">
+<h3 data-en="English" data-vi="Tiếng Anh" data-zh="英语">Tiếng Anh</h3>
+<p data-en="Strong technical communication and reading skills" data-vi="Giao tiếp chuyên môn tốt, đọc hiểu tài liệu kỹ thuật" data-zh="具备较强的专业沟通与技术文档阅读能力">Giao tiếp chuyên môn tốt, đọc hiểu tài liệu kỹ thuật</p>
+<div class="language-level">
+<div class="level-bars">
+<div class="level-bar active"></div>
+<div class="level-bar active"></div>
+<div class="level-bar active"></div>
+<div class="level-bar active"></div>
+<div class="level-bar"></div>
+</div>
+<span class="level-text" data-en="B2" data-vi="B2" data-zh="B2">B2</span>
+</div>
+</div>
+</div>
+<div class="language-card animate-on-scroll">
+<div class="language-flag">
+<img alt="Chinese Flag" height="30" loading="lazy" src="https://flagcdn.com/w80/cn.png" width="40"/>
+</div>
+<div class="language-info">
+<h3 data-en="Chinese" data-vi="Tiếng Trung" data-zh="中文">Tiếng Trung</h3>
+<p data-en="HSK3 - Basic communication" data-vi="HSK3 - Giao tiếp cơ bản" data-zh="HSK3 - 基础交流">HSK3 - Giao tiếp cơ bản</p>
+<div class="language-level">
+<div class="level-bars">
+<div class="level-bar active"></div>
+<div class="level-bar active"></div>
+<div class="level-bar active"></div>
+<div class="level-bar"></div>
+<div class="level-bar"></div>
+</div>
+<span class="level-text" data-en="HSK3" data-vi="HSK3" data-zh="HSK3">HSK3</span>
+</div>
+</div>
+</div>
+</div>
+<div class="language-certificates animate-on-scroll">
+<h3 data-en="Language Background" data-vi="Năng lực ngôn ngữ" data-zh="语言基础">Năng lực ngôn ngữ</h3>
+<div class="cert-list">
+<div class="cert-item">
+<ion-icon name="medal-outline"></ion-icon>
+<span data-en="Academic and Technical English" data-vi="Tiếng Anh học thuật và chuyên ngành" data-zh="学术英语与技术英语">Tiếng Anh học thuật và chuyên ngành</span>
+</div>
+<div class="cert-item">
+<ion-icon name="school-outline"></ion-icon>
+<span data-en="Chinese at HSK3 level" data-vi="Tiếng Trung trình độ HSK3" data-zh="中文 HSK3 水平">Tiếng Trung trình độ HSK3</span>
+</div>
+</div> </div>
+</div>
+</section>
+<section class="section-container dark-section" id="projects">
+<div class="section-header">
+<span class="section-number">07</span>
+<h2 class="section-title animate-on-scroll" data-en="Featured Projects" data-vi="Dự án tiêu biểu" data-zh="重点项目">Dự án tiêu biểu</h2>
+<div class="section-line"></div>
+</div>
+<div class="projects-grid"><article class="project-card animate-on-scroll"><div class="project-image"><img alt="LEGAL IT CHATBOT" height="675" loading="lazy" src="img/achievements/legal-rag-cover.webp" width="1200"/></div><div class="project-content"><div class="project-category" data-en="RAG · Knowledge Graph" data-vi="RAG · Knowledge Graph" data-zh="RAG · 知识图谱">RAG · Knowledge Graph</div><h3>LEGAL IT CHATBOT</h3><p data-en="Co-developed Vietnamese legal Q&amp;A with Article–Clause–Point chunking, hybrid retrieval and a Neo4j-backed Critic. Thesis evaluation on 301 questions reported 81.33% Legal Completeness Rate versus 43.77% for Naive RAG." data-vi="Đồng phát triển chatbot pháp luật tiếng Việt: chunking Điều–Khoản–Điểm, hybrid retrieval và Critic Agent kết nối Neo4j. Đánh giá khóa luận trên 301 câu hỏi ghi nhận Legal Completeness Rate 81,33%, so với 43,77% của Naive RAG." data-zh="共同开发越南语法律问答，结合结构化分块、混合检索及 Neo4j Critic。论文在 301 个问题上的评估报告 LCR 为 81.33%，Naive RAG 为 43.77%。">Đồng phát triển chatbot pháp luật tiếng Việt: chunking Điều–Khoản–Điểm, hybrid retrieval và Critic Agent kết nối Neo4j. Đánh giá khóa luận trên 301 câu hỏi ghi nhận Legal Completeness Rate 81,33%, so với 43,77% của Naive RAG.</p><div class="project-tech"><span>Qdrant</span><span>BM25 / RRF</span><span>Neo4j</span></div><a class="text-link" data-en="View project" data-vi="Xem dự án" data-zh="查看项目" href="https://github.com/PhuIT2503/LEGAL_IT_CHATBOT">Xem dự án</a></div></article><article class="project-card animate-on-scroll"><div class="project-image"><div class="project-type-cover"><span>INSIGHT WITH RAG</span><small>FastAPI / MongoDB</small></div></div><div class="project-content"><div class="project-category" data-en="AI application · Local-first" data-vi="Ứng dụng AI · Local-first" data-zh="AI 应用 · 本地优先">Ứng dụng AI · Local-first</div><h3>INSIGHT WITH RAG</h3><p data-en="Evidence-based profile Q&amp;A with FastAPI, MongoDB and Qdrant. Designed 13 REST endpoints with input validation and fallback handling; the repository includes 30 backend tests." data-vi="Ứng dụng hỏi đáp hồ sơ dựa trên bằng chứng với FastAPI, MongoDB và Qdrant. Thiết kế 13 REST endpoints có kiểm tra dữ liệu và xử lý lỗi; repository gồm 30 bài kiểm thử backend." data-zh="使用 FastAPI、MongoDB 和 Qdrant 实现基于证据的个人档案问答，设计 13 个 REST 接口并加入验证和回退，仓库包含 30 个后端测试。">Ứng dụng hỏi đáp hồ sơ dựa trên bằng chứng với FastAPI, MongoDB và Qdrant. Thiết kế 13 REST endpoints có kiểm tra dữ liệu và xử lý lỗi; repository gồm 30 bài kiểm thử backend.</p><div class="project-tech"><span>FastAPI</span><span>MongoDB</span><span>Qdrant</span></div><a class="text-link" data-en="View project" data-vi="Xem dự án" data-zh="查看项目" href="https://github.com/huystackai/Insight-with-RAG-">Xem dự án</a></div></article><article class="project-card animate-on-scroll"><div class="project-image"><img alt="EG-cDAGAN" height="675" loading="lazy" src="img/achievements/eg-cdagan-cover.webp" width="1200"/></div><div class="project-content"><div class="project-category" data-en="Research · Best Paper" data-vi="Nghiên cứu · Best Paper" data-zh="研究 · 最佳论文">Nghiên cứu · Best Paper</div><h3>EG-cDAGAN</h3><p data-en="First-author research on epsilon-greedy curriculum learning for conditional GANs. Experiments on MNIST, Fashion-MNIST, SVHN and CIFAR-10; Best Paper Award at STAIS 2026." data-vi="Tác giả đầu nghiên cứu epsilon-greedy curriculum learning cho conditional GAN. Thực nghiệm trên MNIST, Fashion-MNIST, SVHN và CIFAR-10; đạt Best Paper Award tại STAIS 2026." data-zh="条件 GAN 的 epsilon-greedy 课程学习研究第一作者，在 MNIST、Fashion-MNIST、SVHN 和 CIFAR-10 上实验，获 STAIS 2026 最佳论文奖。">Tác giả đầu nghiên cứu epsilon-greedy curriculum learning cho conditional GAN. Thực nghiệm trên MNIST, Fashion-MNIST, SVHN và CIFAR-10; đạt Best Paper Award tại STAIS 2026.</p><div class="project-tech"><span>Conditional GAN</span><span>Curriculum learning</span><span>Evaluation</span></div><a class="text-link" data-en="View project" data-vi="Xem dự án" data-zh="查看项目" href="achievements.html#papers">Xem dự án</a></div></article><article class="project-card animate-on-scroll"><div class="project-image"><div class="project-type-cover"><span>docx-engineer</span><small>Python CLI / OOXML</small></div></div><div class="project-content"><div class="project-category" data-en="Developer tooling · Documents" data-vi="Công cụ phát triển · Tài liệu" data-zh="开发工具 · 文档">Công cụ phát triển · Tài liệu</div><h3>docx-engineer</h3><p data-en="Built a Codex skill and Python CLI for auditing, narrow edits and verification of academic and technical Word documents, combining evidence checks, formatting preservation and rendered review." data-vi="Xây dựng Codex skill và Python CLI để audit, chỉnh sửa có giới hạn và xác minh tài liệu Word học thuật, kỹ thuật. Quy trình kết hợp đối chiếu bằng chứng, bảo toàn định dạng và kiểm tra bản render." data-zh="构建 Codex skill 和 Python CLI，审核、有限编辑并验证学术及技术 Word 文档，结合证据检查、格式保留和渲染审阅。">Xây dựng Codex skill và Python CLI để audit, chỉnh sửa có giới hạn và xác minh tài liệu Word học thuật, kỹ thuật. Quy trình kết hợp đối chiếu bằng chứng, bảo toàn định dạng và kiểm tra bản render.</p><div class="project-tech"><span>Python CLI</span><span>OOXML</span><span>Codex skill</span></div><a class="text-link" data-en="View project" data-vi="Xem dự án" data-zh="查看项目" href="https://github.com/huystackai/docx-engineer">Xem dự án</a></div></article><article class="project-card animate-on-scroll"><div class="project-image"><div class="project-type-cover"><span>PPT Master</span><small>Python / SVG / DrawingML</small></div></div><div class="project-content"><div class="project-category" data-en="AI tooling · Presentations" data-vi="Công cụ AI · Thuyết trình" data-zh="AI 工具 · 演示文稿">Công cụ AI · Thuyết trình</div><h3>PPT Master</h3><p data-en="Adapted and packaged the PPT Master workflow as a portable AI-agent skill for document-to-slide creation, reference templates, preview and editable PPTX export." data-vi="Chuyển đổi và đóng gói workflow PPT Master thành skill dùng cho AI agent: tạo slide từ tài liệu, hỗ trợ mẫu tham chiếu, preview và xuất PPTX có thể chỉnh sửa." data-zh="将 PPT Master 工作流适配并打包为可移植 AI-agent skill，支持从文档生成幻灯片、参考模板、预览和可编辑 PPTX 导出。">Chuyển đổi và đóng gói workflow PPT Master thành skill dùng cho AI agent: tạo slide từ tài liệu, hỗ trợ mẫu tham chiếu, preview và xuất PPTX có thể chỉnh sửa.</p><div class="project-tech"><span>Python</span><span>SVG / DrawingML</span><span>Agent workflow</span></div><a class="text-link" data-en="View project" data-vi="Xem dự án" data-zh="查看项目" href="https://github.com/huystackai/ppt-master">Xem dự án</a></div></article><article class="project-card animate-on-scroll"><div class="project-image"><div class="project-type-cover"><span>FaceNet / MTCNN</span><small>PyTorch / OpenCV</small></div></div><div class="project-content"><div class="project-category" data-en="Computer Vision" data-vi="Computer Vision" data-zh="计算机视觉">Computer Vision</div><h3>FaceNet / MTCNN</h3><p data-en="Webcam face-recognition project using FaceNet, MTCNN and OpenCV. The web version runs models in the browser to enroll samples and compare face descriptors." data-vi="Bài thực hành nhận diện khuôn mặt từ webcam bằng FaceNet, MTCNN và OpenCV. Bản web dùng mô hình chạy phía trình duyệt để tạo mẫu và so sánh đặc trưng khuôn mặt." data-zh="使用 FaceNet、MTCNN 和 OpenCV 的摄像头人脸识别项目；网页版在浏览器中运行模型，采集样本并比较人脸特征。">Bài thực hành nhận diện khuôn mặt từ webcam bằng FaceNet, MTCNN và OpenCV. Bản web dùng mô hình chạy phía trình duyệt để tạo mẫu và so sánh đặc trưng khuôn mặt.</p><div class="project-tech"><span>PyTorch</span><span>OpenCV</span><span>Browser inference</span></div><a class="text-link" data-en="View project" data-vi="Xem dự án" data-zh="查看项目" href="https://github.com/huystackai/FaceMask">Xem dự án</a></div></article>
+<div class="project-card animate-on-scroll" data-tilt="">
+<div class="project-image">
+<img alt="GAN Brain Imaging Project" loading="lazy" src="img/DLtumor.jpg"/>
+<div class="project-overlay">
+<div class="overlay-content">
+<ion-icon name="eye-outline"></ion-icon>
+<span data-en="View Project" data-vi="Xem dự án" data-zh="查看项目">Xem dự án</span>
+</div>
+</div>
+</div>
+<div class="project-content">
+<div class="project-category" data-en="Machine Learning" data-vi="Machine Learning" data-zh="机器学习">Machine Learning</div>
+<h3 data-en="GAN-based Brain Imaging Enhancement" data-vi="Tăng cường ảnh não bằng GAN" data-zh="基于 GAN 的脑部影像增强">Tăng cường ảnh não bằng GAN</h3>
+<p data-en="Developed a GAN model to enhance brain medical imaging quality, helping improve diagnostic accuracy and reduce processing time." data-vi="Phát triển mô hình GAN để nâng cao chất lượng ảnh y khoa não bộ, hỗ trợ cải thiện độ chính xác chẩn đoán và giảm thời gian xử lý." data-zh="开发 GAN 模型以提升脑部医学影像质量，帮助提高诊断准确度并缩短处理时间。">Phát triển mô hình GAN để nâng cao chất lượng ảnh y khoa não bộ, hỗ trợ cải thiện độ chính xác chẩn đoán và giảm thời gian xử lý.</p>
+<div class="project-tech">
+<span data-en="Python" data-vi="Python" data-zh="Python">Python</span>
+<span data-en="TensorFlow" data-vi="TensorFlow" data-zh="TensorFlow">TensorFlow</span>
+<span data-en="Computer Vision" data-vi="Computer Vision" data-zh="计算机视觉">Computer Vision</span>
+</div>
+<div class="project-links">
+<a aria-label="GitHub profile" class="project-link" href="https://github.com/huystackai" rel="noopener noreferrer" target="_blank">
+<ion-icon name="logo-github"></ion-icon>
+</a>
+<a aria-label="Contact about this project" class="project-link" href="#contact">
+<ion-icon name="open-outline"></ion-icon>
+</a>
+</div>
+</div>
+</div>
+<div class="project-card animate-on-scroll" data-tilt="">
+<div class="project-image">
+<img alt="Logistics Optimization" loading="lazy" src="img/MLlogistics.jpg"/>
+<div class="project-overlay">
+<div class="overlay-content">
+<ion-icon name="eye-outline"></ion-icon>
+<span data-en="View Project" data-vi="Xem dự án" data-zh="查看项目">Xem dự án</span>
+</div>
+</div>
+</div>
+<div class="project-content">
+<div class="project-category" data-en="Optimization" data-vi="Tối ưu hóa" data-zh="优化">Tối ưu hóa</div>
+<h3 data-en="Delivery-time analysis with ML" data-vi="Phân tích thời gian giao hàng bằng ML" data-zh="机器学习配送时间分析">Phân tích thời gian giao hàng bằng ML</h3>
+<p data-en="Research applying machine learning to delivery-time factors and customer reviews, presented at CTST 2025." data-vi="Nghiên cứu ứng dụng học máy để phân tích các yếu tố ảnh hưởng thời gian giao hàng và đánh giá khách hàng; trình bày tại CTST 2025." data-zh="应用机器学习分析配送时间影响因素与客户评价，在 CTST 2025 报告。">Nghiên cứu ứng dụng học máy để phân tích các yếu tố ảnh hưởng thời gian giao hàng và đánh giá khách hàng; trình bày tại CTST 2025.</p>
+<div class="project-tech">
+<span data-en="Python" data-vi="Python" data-zh="Python">Python</span>
+<span data-en="Scikit-learn" data-vi="Scikit-learn" data-zh="Scikit-learn">Scikit-learn</span>
+<span data-en="Data Analysis" data-vi="Phân tích dữ liệu" data-zh="数据分析">Phân tích dữ liệu</span>
+</div>
+<div class="project-links">
+<a aria-label="GitHub profile" class="project-link" href="https://github.com/huystackai" rel="noopener noreferrer" target="_blank">
+<ion-icon name="logo-github"></ion-icon>
+</a>
+<a aria-label="Contact about this project" class="project-link" href="#contact">
+<ion-icon name="open-outline"></ion-icon>
+</a>
+</div>
+</div>
+</div>
+<div class="project-card animate-on-scroll" data-tilt="">
+<div class="project-image">
+<img alt="Fatigue Detection System" loading="lazy" src="img/realtime.jpg"/>
+<div class="project-overlay">
+<div class="overlay-content">
+<ion-icon name="eye-outline"></ion-icon>
+<span data-en="View Project" data-vi="Xem dự án" data-zh="查看项目">Xem dự án</span>
+</div>
+</div>
+</div>
+<div class="project-content">
+<div class="project-category" data-en="Computer Vision" data-vi="Computer Vision" data-zh="计算机视觉">Computer Vision</div>
+<h3 data-en="Real-time Fatigue Detection System" data-vi="Hệ thống phát hiện mệt mỏi thời gian thực" data-zh="实时疲劳检测系统">Hệ thống phát hiện mệt mỏi thời gian thực</h3>
+<p data-en="Created an AI system using computer vision to detect driver fatigue in real time and support road safety." data-vi="Xây dựng hệ thống AI dùng computer vision để phát hiện trạng thái mệt mỏi của tài xế theo thời gian thực, góp phần tăng an toàn giao thông." data-zh="构建基于计算机视觉的 AI 系统，用于实时检测驾驶疲劳并提升道路安全。">Xây dựng hệ thống AI dùng computer vision để phát hiện trạng thái mệt mỏi của tài xế theo thời gian thực, góp phần tăng an toàn giao thông.</p>
+<div class="project-tech">
+<span data-en="OpenCV" data-vi="OpenCV" data-zh="OpenCV">OpenCV</span>
+<span data-en="PyTorch" data-vi="PyTorch" data-zh="PyTorch">PyTorch</span>
+<span data-en="Real-time Processing" data-vi="Xử lý thời gian thực" data-zh="实时处理">Xử lý thời gian thực</span>
+</div>
+<div class="project-links">
+<a aria-label="GitHub profile" class="project-link" href="https://github.com/huystackai" rel="noopener noreferrer" target="_blank">
+<ion-icon name="logo-github"></ion-icon>
+</a>
+<a aria-label="Contact about this project" class="project-link" href="#contact">
+<ion-icon name="open-outline"></ion-icon>
+</a>
+</div>
+</div>
+</div>
+<div class="project-card animate-on-scroll" data-tilt="">
+<div class="project-image">
+<img alt="Yoga Content Creation" loading="lazy" src="img/yoga.jpg"/>
+<div class="project-overlay">
+<div class="overlay-content">
+<ion-icon name="eye-outline"></ion-icon>
+<span data-en="View Project" data-vi="Xem dự án" data-zh="查看项目">Xem dự án</span>
+</div>
+</div>
+</div>
+<div class="project-content">
+<div class="project-category" data-en="Digital Wellness" data-vi="Sức khỏe số" data-zh="数字健康">Sức khỏe số</div>
+<h3 data-en="Digital Wellness Platform" data-vi="Nền tảng nội dung sức khỏe số" data-zh="数字健康内容平台">Nền tảng nội dung sức khỏe số</h3>
+<p data-en="Grew a TikTok presence to 1K+ followers through educational yoga content, connecting technology and wellness in digital spaces." data-vi="Phát triển kênh TikTok hơn 1K người theo dõi thông qua nội dung yoga giáo dục, kết nối công nghệ với sức khỏe trong môi trường số." data-zh="通过教育型瑜伽内容把 TikTok 社群发展到 1K+ 关注者，在数字环境中连接科技与健康。">Phát triển kênh TikTok hơn 1K người theo dõi thông qua nội dung yoga giáo dục, kết nối công nghệ với sức khỏe trong môi trường số.</p>
+<div class="project-tech">
+<span data-en="Content Strategy" data-vi="Chiến lược nội dung" data-zh="内容策略">Chiến lược nội dung</span>
+<span data-en="Social Media" data-vi="Mạng xã hội" data-zh="社交媒体">Mạng xã hội</span>
+<span data-en="Wellness Education" data-vi="Giáo dục sức khỏe" data-zh="健康教育">Giáo dục sức khỏe</span>
+</div>
+<div class="project-links">
+<a aria-label="TikTok profile" class="project-link" href="https://www.tiktok.com/@huylearnhub?lang=vi-VN" rel="noopener noreferrer" target="_blank">
+<ion-icon name="logo-tiktok"></ion-icon>
+</a>
+<a aria-label="Contact about this project" class="project-link" href="#contact">
+<ion-icon name="open-outline"></ion-icon>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section-container" id="contact">
+<div class="section-header">
+<span class="section-number">08</span>
+<h2 class="section-title animate-on-scroll" data-en="Get In Touch" data-vi="Liên hệ" data-zh="联系我">Liên hệ</h2>
+<div class="section-line"></div>
+</div>
+<div class="contact-container">
+<div class="contact-content animate-on-scroll">
+<div class="contact-text">
+<h3 data-en="I’d love to hear from you" data-vi="Tôi rất vui nếu được kết nối cùng bạn" data-zh="很高兴和你建立联系">Tôi rất vui nếu được kết nối cùng bạn</h3>
+<p data-en="I’m always open to new opportunities, collaborations, and thoughtful conversations around technology and well-being." data-vi="Tôi luôn sẵn sàng trao đổi về cơ hội mới, dự án hợp tác, hoặc những cuộc trò chuyện xoay quanh công nghệ và sức khỏe." data-zh="我一直乐于交流新的合作机会，也欢迎围绕科技与身心健康展开更深入的对话。">Tôi luôn sẵn sàng trao đổi về cơ hội mới, dự án hợp tác, hoặc những cuộc trò chuyện xoay quanh công nghệ và sức khỏe.</p>
+<p data-en="If you have a project in mind, want to talk about AI, or need support for a wellness program, feel free to send me a message." data-vi="Nếu bạn có dự án muốn hợp tác, muốn trao đổi về AI, hoặc cần hỗ trợ cho một chương trình sức khỏe, hãy để lại lời nhắn cho tôi." data-zh="如果你正在筹备项目、想交流 AI，或需要健康项目方面的支持，欢迎给我留言。">Nếu bạn có dự án muốn hợp tác, muốn trao đổi về AI, hoặc cần hỗ trợ cho một chương trình sức khỏe, hãy để lại lời nhắn cho tôi.</p>
+</div>
+<div class="contact-form">
+<form class="form-container">
+<div class="form-row">
+<div class="form-group">
+<input data-en-placeholder="Your name" data-vi-placeholder="Họ và tên" data-zh-placeholder="你的姓名" id="name" name="from_name" required="" type="text"/>
+<label data-en="Your Name" data-vi="Họ tên của bạn" data-zh="你的姓名" for="name">Họ tên của bạn</label>
+</div>
+<div class="form-group">
+<input data-en-placeholder="Your email" data-vi-placeholder="Email của bạn" data-zh-placeholder="你的邮箱" id="email" name="email" required="" type="email"/>
+<label data-en="Your Email" data-vi="Email của bạn" data-zh="你的邮箱" for="email">Email của bạn</label>
+</div>
+</div>
+<div class="form-group">
+<input data-en-placeholder="Subject" data-vi-placeholder="Chủ đề" data-zh-placeholder="主题" id="subject" name="subject" required="" type="text"/>
+<label data-en="Subject" data-vi="Chủ đề" data-zh="主题" for="subject">Chủ đề</label>
+</div>
+<div class="form-group">
+<textarea data-en-placeholder="Your message" data-vi-placeholder="Nội dung bạn muốn gửi" data-zh-placeholder="你想发送的内容" id="message" name="message" required=""></textarea>
+<label data-en="Your Message" data-vi="Nội dung" data-zh="留言内容" for="message">Nội dung</label>
+</div>
+<input id="formSubjectMeta" name="_subject" type="hidden" value="Portfolio contact from Nguyen Gia Huy"/>
+<input name="_template" type="hidden" value="table"/>
+<input autocomplete="off" class="hp-field" name="_honey" tabindex="-1" type="text"/>
+<p class="form-note" data-en="Your message will be sent directly from this website to my inbox." data-vi="Tin nhắn sẽ được gửi trực tiếp từ website đến email của tôi." data-zh="你的消息会直接从网站发送到我的邮箱。">Tin nhắn sẽ được gửi trực tiếp từ website đến email của tôi.</p>
+<button class="submit-btn" type="submit">
+<span data-en="Send Message" data-vi="Gửi tin nhắn" data-zh="发送消息">Gửi tin nhắn</span>
+<ion-icon name="send-outline"></ion-icon>
+</button>
+</form>
+</div>
+</div>
+<div class="contact-info animate-on-scroll">
+<div class="contact-methods">
+<div class="contact-method">
+<div class="method-icon">
+<ion-icon name="mail-outline"></ion-icon>
+</div>
+<div class="method-content">
+<h4 data-en="Email" data-vi="Email" data-zh="邮箱">Email</h4>
+<p>giahuy.workhard@gmail.com</p>
+<a data-en="Send Email" data-vi="Gửi Email" data-zh="发送邮件" href="mailto:giahuy.workhard@gmail.com">Gửi Email</a>
+</div>
+</div>
+<div class="contact-method">
+<div class="method-icon">
+<ion-icon name="call-outline"></ion-icon>
+</div>
+<div class="method-content">
+<h4 data-en="Phone" data-vi="Điện thoại" data-zh="电话">Điện thoại</h4>
+<p>+84 968038545</p>
+<a data-en="Call Now" data-vi="Gọi ngay" data-zh="立即拨打" href="tel:+84968038545">Gọi ngay</a>
+</div>
+</div>
+<div class="contact-method">
+<div class="method-icon">
+<ion-icon name="location-outline"></ion-icon>
+</div>
+<div class="method-content">
+<h4 data-en="Location" data-vi="Địa chỉ" data-zh="地点">Địa chỉ</h4>
+<p data-en="Ho Chi Minh City, Vietnam" data-vi="TP. Hồ Chí Minh, Việt Nam" data-zh="越南胡志明市">TP. Hồ Chí Minh, Việt Nam</p>
+<a data-en="View Map" data-vi="Xem bản đồ" data-zh="查看地图" href="https://maps.google.com/?q=Ho+Chi+Minh+City+Vietnam" rel="noopener noreferrer" target="_blank">Xem bản đồ</a>
+</div>
+</div>
+</div>
+<div class="social-section">
+<h4 data-en="Follow Me" data-vi="Kết nối với tôi" data-zh="关注我">Kết nối với tôi</h4>
+<div class="social-links">
+<a class="social-link linkedin" href="https://www.linkedin.com/in/gia-huy-nguyen-7bb014349/" rel="noopener noreferrer" target="_blank">
+<ion-icon name="logo-linkedin"></ion-icon>
+<span>LinkedIn</span>
+</a>
+<a class="social-link tiktok" href="https://www.tiktok.com/@huylearnhub?lang=vi-VN" rel="noopener noreferrer" target="_blank">
+<ion-icon name="logo-tiktok"></ion-icon>
+<span>TikTok</span>
+</a>
+<a class="social-link github" href="https://github.com/huystackai" rel="noopener noreferrer" target="_blank">
+<ion-icon name="logo-github"></ion-icon>
+<span>GitHub</span>
+</a>
+<a class="social-link facebook" href="https://www.facebook.com/giahuy0968" rel="noopener noreferrer" target="_blank">
+<ion-icon name="logo-facebook"></ion-icon>
+<span>Facebook</span>
+</a>
+<a class="social-link instagram" href="https://www.instagram.com/ndza_hiu02/" rel="noopener noreferrer" target="_blank">
+<ion-icon name="logo-instagram"></ion-icon>
+<span>Instagram</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="footer">
+<div class="footer-content">
+<div class="footer-text">
+<p data-en="© 2026 Nguyen Gia Huy. Designed with care, warmth, and a mindset of continuous learning." data-vi="© 2026 Nguyễn Gia Huy. Thiết kế với sự chỉn chu, ấm áp và tinh thần học hỏi." data-zh="© 2026 阮嘉辉。这个作品集带着认真、温度与持续学习的态度完成。">© 2026 Nguyễn Gia Huy. Thiết kế với sự chỉn chu, ấm áp và tinh thần học hỏi.</p>
+<p class="updated-note" data-en="Updated 19 November 2026" data-vi="Cập nhật ngày 19/11/2026" data-zh="更新于 2026 年 11 月 19 日">Cập nhật ngày 19/11/2026</p></div>
+<div class="footer-links">
+<a data-en="About" data-vi="Giới thiệu" data-zh="关于" href="#about">Giới thiệu</a>
+<a data-en="Experience" data-vi="Kinh nghiệm" data-zh="经历" href="#experience">Kinh nghiệm</a>
+<a data-en="Achievements" data-vi="Thành tích" data-zh="成果" href="#achievements">Thành tích</a>
+<a data-en="Skills" data-vi="Kỹ năng" data-zh="技能" href="#skills">Kỹ năng</a>
+<a data-en="Hobbies" data-vi="Sở thích" data-zh="兴趣" href="#hobbies">Sở thích</a>
+<a data-en="Languages" data-vi="Ngôn ngữ" data-zh="语言" href="#languages">Ngôn ngữ</a>
+<a data-en="Projects" data-vi="Dự án" data-zh="项目" href="#projects">Dự án</a>
+<a data-en="Contact" data-vi="Liên hệ" data-zh="联系" href="#contact">Liên hệ</a>
+<a class="text-link" data-en="Certificates &amp; papers" data-vi="Chứng nhận &amp; paper" data-zh="证书与论文" href="achievements.html">Chứng nhận &amp; paper</a></div>
+</div>
+<div class="back-to-top" id="backToTop">
+<ion-icon name="chevron-up-outline"></ion-icon>
+</div>
+</footer>
+<script src="js/script.js"></script>
 </body>
 </html>
